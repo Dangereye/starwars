@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react';
+import Axios from 'axios';
+import Movies from './components/movies/Movies';
+import Navbar from './components/Navbar';
+import Loader from './components/Loader';
 
-function App() {
+const App = () => {
+  const [movies, setMovies] = useState([]);
+  useEffect(() => {
+    const getData = () => {
+      Axios.get(`https://swapi.dev/api/films`).then(
+        ({ data }) => {
+          setMovies(data.results);
+        },
+        (error) => {
+          console.log(error);
+        }
+      );
+    };
+    getData();
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div id='app'>
+      <Navbar />
+      {movies.length ? (
+        <Movies data={movies} />
+      ) : (
+        <Loader text='A long time ago in a galaxy far, far away..' />
+      )}
     </div>
   );
-}
+};
 
 export default App;

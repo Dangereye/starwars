@@ -1,0 +1,12 @@
+$font-size: clamp(1.6rem, 2.5vw, 2rem);
+
+$font-color-dark: rgb(27, 27, 27);
+$font-color-darkest: rgb(0, 0, 0);
+
+$font-color-light: rgb(247, 247, 247);
+$font-color-lightest: rgb(255, 255, 255);
+
+$gap: clamp(1.6rem, 3vw, 4rem);
+
+$box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2), 0 10px 15px rgba(0, 0, 0, 0.3),
+  0 20px 25px rgba(0, 0, 0, 0.2);

@@ -1,0 +1,50 @@
+#movies {
+  margin-top: 100px;
+  padding: $gap;
+  color: $font-color-darkest;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+
+  .container {
+    h1.section-title {
+      color: $font-color-lightest;
+    }
+
+    .movies {
+      margin-top: 4rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(31rem, 1fr));
+      gap: 8rem;
+
+      .movie-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 0 4rem 4rem 4rem;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        background: linear-gradient(
+          135deg,
+          rgba(255, 255, 255, 0.2),
+          rgba(255, 255, 255, 0.6)
+        );
+        backdrop-filter: blur(6px);
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+
+        img {
+          display: block;
+          position: relative;
+          top: -4rem;
+          width: 100%;
+          box-shadow: $box-shadow;
+        }
+
+        .movie-info {
+          position: relative;
+          top: -2rem;
+          padding: 2rem 0;
+        }
+      }
+    }
+  }
+}

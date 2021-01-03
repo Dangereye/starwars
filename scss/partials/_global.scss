@@ -1,0 +1,25 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+body {
+  font-size: $font-size;
+  color: $font-color-dark;
+}
+
+#app {
+}
+
+section {
+  width: 100%;
+  min-height: max-content;
+}
