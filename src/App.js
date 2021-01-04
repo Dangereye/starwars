@@ -3,6 +3,7 @@ import Axios from 'axios';
 import Movies from './components/movies/Movies';
 import Navbar from './components/Navbar';
 import Loader from './components/Loader';
+import People from './components/People';
 
 const App = () => {
   const [movies, setMovies] = useState([]);
@@ -28,6 +29,7 @@ const App = () => {
       ) : (
         <Loader text='A long time ago in a galaxy far, far away..' />
       )}
+      <People />
     </div>
   );
 };

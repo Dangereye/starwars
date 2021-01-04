@@ -13,12 +13,12 @@ const Card = ({ data }) => {
     <div className='movie-card'>
       <img src={covers[data.episode_id - 1]} alt={data.title} />
       <div className='movie-info'>
-        <h2>{data.title}</h2>
+        <h3>{data.title}</h3>
         <div className='episode'>Episode: {data.episode_id}</div>
         <div className='director'>Director: {data.director}</div>
         <div className='released'>Released: {data.release_date}</div>
       </div>
-      <button className='btn-movie-card'>
+      <button className='btn-primary'>
         <span>Details</span>
         <IoMdArrowRoundForward />
       </button>

@@ -1,13 +1,12 @@
 #movies {
   margin-top: 100px;
-  padding: $gap;
   color: $font-color-darkest;
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
 
   .container {
-    h1.section-title {
+    h2.section-title {
       color: $font-color-lightest;
     }
 
