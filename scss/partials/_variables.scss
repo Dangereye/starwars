@@ -6,7 +6,8 @@ $font-color-darkest: rgb(0, 0, 0);
 $font-color-light: rgb(247, 247, 247);
 $font-color-lightest: rgb(255, 255, 255);
 
-$gap: clamp(1.6rem, 3vw, 4rem);
+$gapX: clamp(1.6rem, 3vw, 4rem);
+$gapY: 4rem;
 
 $box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2), 0 10px 15px rgba(0, 0, 0, 0.3),
   0 20px 25px rgba(0, 0, 0, 0.2);

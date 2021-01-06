@@ -6,13 +6,14 @@ const People = () => {
     <section id='people'>
       <div className='container'>
         <div className='text'>
-          <h2>Characters</h2>
+          <h2>82 Characters</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
-            saepe laboriosam enim minus porro veritatis, provident mollitia
-            voluptates doloribus!?
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed
+            corporis in accusamus reprehenderit, possimus provident unde! Harum,
+            explicabo? Fuga consectetur vel dolores cum quaerat quod dolore
+            corporis. Officia, in rem?
           </p>
-          <button className='btn-primary'>View Characters</button>
+          <button className='btn-dark'>View Characters</button>
         </div>
         <div className='image'>
           <img src={people} alt='Characters' />

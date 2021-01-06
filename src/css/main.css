@@ -57,10 +57,22 @@ button span,
   margin-right: 8px;
 }
 
-button.btn-primary,
-.btn.btn-primary {
+button.btn-dark,
+.btn.btn-dark {
   color: #fff;
   background-color: #000;
+}
+
+button.btn-light,
+.btn.btn-light {
+  color: #000;
+  background-color: #fff;
+}
+
+button.btn-red,
+.btn.btn-red {
+  color: #fff;
+  background-color: #e11c1c;
 }
 
 button:hover,
@@ -93,18 +105,23 @@ body {
   color: #1b1b1b;
 }
 
+#app {
+  overflow-x: hidden;
+}
+
 section {
   width: 100%;
-  min-height: -webkit-max-content;
-  min-height: -moz-max-content;
-  min-height: max-content;
-  padding: clamp(1.6rem, 3vw, 4rem);
+  min-height: 60rem;
+  padding: 4rem clamp(1.6rem, 3vw, 4rem);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 section .container {
@@ -181,7 +198,7 @@ section .container {
 }
 
 .loader {
-  padding: clamp(1.6rem, 3vw, 4rem);
+  padding: 4rem gapX;
   width: 100%;
   min-height: 100vh;
   display: -webkit-box;
@@ -247,6 +264,7 @@ section .container {
 
 #movies .container h2.section-title {
   color: white;
+  margin-bottom: 8rem;
 }
 
 #movies .container .movies {
@@ -294,6 +312,9 @@ section .container {
 }
 
 #people {
+  min-height: -webkit-max-content;
+  min-height: -moz-max-content;
+  min-height: max-content;
   padding: 0 clamp(1.6rem, 3vw, 4rem);
 }
 
@@ -309,7 +330,7 @@ section .container {
 }
 
 #people .container .text {
-  padding: clamp(1.6rem, 3vw, 4rem) 0;
+  padding: 4rem 0;
 }
 
 #people .container .image {
@@ -321,4 +342,172 @@ section .container {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+#planets {
+  padding: 4rem clamp(1.6rem, 3vw, 4rem);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  color: white;
+}
+
+#planets .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+#species {
+  padding: 0 clamp(1.6rem, 3vw, 4rem);
+}
+
+#species .container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(31rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(31rem, 1fr));
+  gap: clamp(1.6rem, 3vw, 4rem);
+}
+
+#species .container .images {
+  min-height: 60rem;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#species .container .images img {
+  position: absolute;
+  -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2), 0 10px 15px rgba(0, 0, 0, 0.3), 0 20px 25px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2), 0 10px 15px rgba(0, 0, 0, 0.3), 0 20px 25px rgba(0, 0, 0, 0.2);
+}
+
+#species .container .images img:nth-of-type(1) {
+  width: 110%;
+  max-width: 45rem;
+  top: 50%;
+  left: 15%;
+  -webkit-transform: translate(-50%, -50%) rotate(-7deg);
+          transform: translate(-50%, -50%) rotate(-7deg);
+  z-index: 2;
+}
+
+@media (max-width: 699px) {
+  #species .container .images img:nth-of-type(1) {
+    top: 45%;
+  }
+}
+
+#species .container .images img:nth-of-type(2) {
+  width: 45%;
+  max-width: 25rem;
+  top: 10%;
+  left: 70%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+@media (max-width: 666px) {
+  #species .container .images img:nth-of-type(2) {
+    left: 85%;
+  }
+}
+
+#species .container .images img:nth-of-type(3) {
+  width: 55%;
+  max-width: 28rem;
+  top: 90%;
+  left: 60%;
+  -webkit-transform: translate(-50%, -50%) rotate(3deg);
+          transform: translate(-50%, -50%) rotate(3deg);
+  z-index: 3;
+}
+
+@media (max-width: 699px) {
+  #species .container .images img:nth-of-type(3) {
+    top: 85%;
+  }
+}
+
+#species .container .text {
+  padding: 4rem 0;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+#starships {
+  background-color: #f8f8f8;
+}
+
+#starships .container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(31rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(31rem, 1fr));
+  gap: clamp(1.6rem, 3vw, 4rem);
+}
+
+#starships .container .text {
+  padding: 4rem 0;
+}
+
+#starships .container .images {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+#starships .container .images img {
+  width: 100%;
+}
+
+@media (max-width: 699px) {
+  #starships .container .images {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+  }
+}
+
+#vehicles .container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(31rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(31rem, 1fr));
+  gap: clamp(1.6rem, 3vw, 4rem);
+}
+
+#vehicles .container .text {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  padding: 4rem 0;
+}
+
+#vehicles .container .images {
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+#vehicles .container .images img {
+  width: auto;
+  max-height: 50rem;
 }

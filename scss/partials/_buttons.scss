@@ -13,9 +13,17 @@ button,
     margin-right: 8px;
   }
 
-  &.btn-primary {
+  &.btn-dark {
     color: #fff;
     background-color: #000;
+  }
+  &.btn-light {
+    color: #000;
+    background-color: #fff;
+  }
+  &.btn-red {
+    color: #fff;
+    background-color: #e11c1c;
   }
 
   &:hover {

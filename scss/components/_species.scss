@@ -1,0 +1,59 @@
+#species {
+  padding: 0 $gapX;
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(31rem, 1fr));
+    gap: $gapX;
+
+    .images {
+      min-height: 60rem;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        position: absolute;
+        box-shadow: $box-shadow;
+      }
+      img:nth-of-type(1) {
+        width: 110%;
+        max-width: 45rem;
+        top: 50%;
+        left: 15%;
+        transform: translate(-50%, -50%) rotate(-7deg);
+        z-index: 2;
+        @media (max-width: 699px) {
+          top: 45%;
+        }
+      }
+      img:nth-of-type(2) {
+        width: 45%;
+        max-width: 25rem;
+        top: 10%;
+        left: 70%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        @media (max-width: 666px) {
+          left: 85%;
+        }
+      }
+      img:nth-of-type(3) {
+        width: 55%;
+        max-width: 28rem;
+        top: 90%;
+        left: 60%;
+        transform: translate(-50%, -50%) rotate(3deg);
+        z-index: 3;
+
+        @media (max-width: 699px) {
+          top: 85%;
+        }
+      }
+    }
+    .text {
+      padding: $gapY 0;
+      align-self: center;
+    }
+  }
+}

@@ -18,7 +18,7 @@ const Card = ({ data }) => {
         <div className='director'>Director: {data.director}</div>
         <div className='released'>Released: {data.release_date}</div>
       </div>
-      <button className='btn-primary'>
+      <button className='btn-dark'>
         <span>Details</span>
         <IoMdArrowRoundForward />
       </button>

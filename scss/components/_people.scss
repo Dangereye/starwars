@@ -1,13 +1,14 @@
 #people {
-  padding: 0 $gap;
+  min-height: max-content;
+  padding: 0 $gapX;
   .container {
     display: grid;
     align-items: center;
     grid-template-columns: repeat(auto-fit, minmax(31rem, 1fr));
-    gap: $gap;
+    gap: $gapX;
 
     .text {
-      padding: $gap 0;
+      padding: $gapY 0;
     }
     .image {
       height: 100%;

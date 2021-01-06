@@ -6,7 +6,7 @@ const Movies = ({ data }) => {
   return (
     <section id='movies' style={{ backgroundImage: `url(${background})` }}>
       <div className='container'>
-        <h2 className='section-title'>Movies</h2>
+        <h2 className='section-title'>6 Movies</h2>
         <div className='movies'>
           {data.map((item, index) => {
             return <Card data={item} key={index} />;
