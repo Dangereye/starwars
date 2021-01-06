@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Axios from 'axios';
 import Movies from './components/movies/Movies';
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 import Loader from './components/Loader';
 import People from './components/People';
 import Planets from './components/Planets';
@@ -38,6 +39,7 @@ const App = () => {
       <Species />
       <Starships />
       <Vehicles />
+      <Footer />
     </div>
   );
 };

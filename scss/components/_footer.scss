@@ -1,0 +1,10 @@
+footer {
+  padding: $gapY $gapX;
+  background-color: #000;
+  color: $font-color-light;
+  .container {
+    .copyright {
+      font-size: 1.4rem;
+    }
+  }
+}

@@ -511,3 +511,13 @@ section .container {
   width: auto;
   max-height: 50rem;
 }
+
+footer {
+  padding: 4rem clamp(1.6rem, 3vw, 4rem);
+  background-color: #000;
+  color: #f7f7f7;
+}
+
+footer .container .copyright {
+  font-size: 1.4rem;
+}
