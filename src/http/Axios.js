@@ -1,4 +1,4 @@
-import Axios from 'axios';
-export const getData = (params) => {
-  Axios.get(`https://swapi.dev/api/${params}`);
-};
+import axios from 'axios';
+export const getData = axios.create({
+  baseURL: 'https://swapi.dev/api',
+});

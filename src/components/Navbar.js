@@ -1,13 +1,18 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Logo from '../Icons/Logo';
 
 const Navbar = () => {
   return (
     <nav id='navbar'>
       <div className='container'>
-        <Logo />
+        <Link to='/'>
+          <Logo />
+        </Link>
         <ul className='desktop-menu'>
-          <li>Movies</li>
+          <li>
+            <Link to='/movies'>Movies</Link>
+          </li>
           <li>People</li>
           <li>Planets</li>
           <li>Species</li>
