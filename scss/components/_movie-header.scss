@@ -1,0 +1,59 @@
+#movie-header {
+  padding: 4rem $paddingX;
+  .container {
+    display: flex;
+    .image {
+      flex: 1 1 30%;
+      img {
+        width: 100%;
+      }
+    }
+    .text {
+      flex: 1 1 70%;
+      padding-left: 4rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      h4 {
+        margin-bottom: 1rem;
+      }
+
+      .stats {
+        margin: 1rem 0 2rem 0;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        font-size: 1.5rem;
+        color: rgb(85, 85, 85);
+        > div:not(:last-child) {
+          &::after {
+            margin: 0 1rem;
+            font-size: 2rem;
+            content: "|";
+          }
+        }
+        div {
+          display: flex;
+          align-items: center;
+          span {
+            margin-left: 5px;
+          }
+        }
+      }
+      .production {
+        margin: 4rem 0;
+        display: flex;
+
+        > *:not(:last-child) {
+          margin-right: 4rem;
+        }
+      }
+    }
+    @media (max-width: 568px) {
+      flex-direction: column;
+      .text {
+        padding: 4rem 0 0 0;
+      }
+    }
+  }
+}

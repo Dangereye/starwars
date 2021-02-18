@@ -48,6 +48,12 @@
           position: relative;
           top: -2rem;
           padding: 2rem 0;
+          h4,
+          h3 {
+            text-align: left;
+            color: $textDarkest;
+            margin-bottom: 1rem;
+          }
         }
       }
     }

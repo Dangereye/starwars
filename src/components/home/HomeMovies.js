@@ -17,7 +17,7 @@ const Movies = () => {
   if (error) {
     return <Message text={error} role="info" />;
   }
-  if (movies.length) {
+  if (movies) {
     return (
       <section
         id="movies"
@@ -28,8 +28,8 @@ const Movies = () => {
           <h4>Explore</h4>
           <h2 className="section-title">6 Movies</h2>
           <div className="movies">
-            {movies.map((movie, index) => {
-              return <Card data={movie} key={index} id={index + 1} />;
+            {movies.results.map((movie, index) => {
+              return <Card movie={movie} key={index} id={index + 1} />;
             })}
           </div>
         </div>

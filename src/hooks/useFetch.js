@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 const useFetch = (url) => {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [data, setData] = useState([]);
+  const [data, setData] = useState(null);
   useEffect(() => {
     fetch(url)
       .then((res) => {
@@ -16,7 +16,8 @@ const useFetch = (url) => {
       })
       .then((data) => {
         console.log("Fetch success.");
-        setData(data.results);
+        console.log(data);
+        setData(data);
         setError(null);
         setIsLoading(false);
       })

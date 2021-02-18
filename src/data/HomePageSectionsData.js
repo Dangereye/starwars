@@ -1,5 +1,4 @@
 import characters from "../images/people.jpg";
-import planets from "../images/planets.jpg";
 import vehicles from "../images/vehicles.jpg";
 import starships from "../images/starships.jpg";
 export const HomePageSectionsData = {

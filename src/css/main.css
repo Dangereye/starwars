@@ -504,6 +504,13 @@ section.homepage-section .container .text {
   padding: 2rem 0;
 }
 
+#movies .container .movies .movie-card .movie-info h4,
+#movies .container .movies .movie-card .movie-info h3 {
+  text-align: left;
+  color: black;
+  margin-bottom: 1rem;
+}
+
 @media (max-width: 666px) {
   #movies {
     padding: 4rem clamp(1.6rem, 3vw, 4rem);
@@ -519,6 +526,103 @@ section.homepage-section .container .text {
   content: "";
   display: block;
   background-color: rgba(0, 0, 0, 0.7);
+}
+
+#movie-header {
+  padding: 4rem clamp(1.6rem, 3vw, 4rem);
+}
+
+#movie-header .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#movie-header .container .image {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 30%;
+          flex: 1 1 30%;
+}
+
+#movie-header .container .image img {
+  width: 100%;
+}
+
+#movie-header .container .text {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 70%;
+          flex: 1 1 70%;
+  padding-left: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#movie-header .container .text h4 {
+  margin-bottom: 1rem;
+}
+
+#movie-header .container .text .stats {
+  margin: 1rem 0 2rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.5rem;
+  color: #555555;
+}
+
+#movie-header .container .text .stats > div:not(:last-child)::after {
+  margin: 0 1rem;
+  font-size: 2rem;
+  content: "|";
+}
+
+#movie-header .container .text .stats div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#movie-header .container .text .stats div span {
+  margin-left: 5px;
+}
+
+#movie-header .container .text .production {
+  margin: 4rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#movie-header .container .text .production > *:not(:last-child) {
+  margin-right: 4rem;
+}
+
+@media (max-width: 568px) {
+  #movie-header .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #movie-header .container .text {
+    padding: 4rem 0 0 0;
+  }
 }
 
 #species {

@@ -4,7 +4,7 @@ import Navbar from "./components/layout/Navbar";
 import MobileMenu from "./components/layout/MobileMenu";
 import Footer from "./components/layout/Footer";
 import Home from "./pages/Home";
-import Movies from "./pages/Movies";
+import Movies from "./pages/Movie";
 import People from "./pages/People";
 import Planets from "./pages/Planets";
 import Species from "./pages/Species";
