@@ -1,0 +1,11 @@
+.message {
+  width: 100%;
+  padding: 1rem $paddingX;
+
+  &.warning {
+    background-color: $warning;
+  }
+  &.info {
+    background-color: $info;
+  }
+}

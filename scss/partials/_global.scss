@@ -1,3 +1,4 @@
+// Reset
 *,
 *::before,
 *::after {
@@ -11,26 +12,34 @@ li {
   list-style: none;
 }
 
+a {
+  text-decoration: none;
+}
+
+// Global Styles
 body {
-  font-size: $font-size;
-  color: $font-color-dark;
+  font-size: $fontSize;
+  color: $textDark;
 }
 
 #app {
-  margin-top: 100px;
-  overflow-x: hidden;
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 7.5rem;
+  display: grid;
+  grid-template-rows: 1fr auto;
 }
 
 section {
   width: 100%;
-  min-height: 60rem;
-  padding: $gapY $gapX;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0 $paddingX;
+}
 
-  .container {
-    width: 100%;
-    max-width: 1400px;
-  }
+.container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1400px;
 }

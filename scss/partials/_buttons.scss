@@ -1,15 +1,14 @@
 button,
 .btn {
+  width: max-content;
   display: flex;
-  justify-content: center;
   align-items: center;
-  padding: 1.6rem 3.2rem;
-  font-size: $font-size;
+  font-size: $fontSize;
   border: none;
   cursor: pointer;
   transition: 0.4s;
 
-  span {
+  > *:not(:last-child) {
     margin-right: 8px;
   }
 
@@ -17,13 +16,27 @@ button,
     color: #fff;
     background-color: #000;
   }
+
   &.btn-light {
     color: #000;
     background-color: #fff;
   }
+
   &.btn-red {
     color: #fff;
     background-color: #e11c1c;
+  }
+
+  &.btn-large {
+    padding: 16px 32px;
+  }
+
+  &.btn-medium {
+    padding: 10px 20px;
+  }
+
+  &.btn-small {
+    padding: 5px 10px;
   }
 
   &:hover {

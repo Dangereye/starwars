@@ -1,9 +1,12 @@
 footer {
-  padding: $gapY $gapX;
-  background-color: #000;
-  color: $font-color-light;
+  padding: 1rem $paddingX;
+  background-color: $bgDarkest;
+  color: $textLight;
   .container {
-    .copyright {
+    display: flex;
+    justify-content: space-between;
+
+    span {
       font-size: 1.4rem;
     }
   }

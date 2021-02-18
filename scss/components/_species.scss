@@ -1,59 +1,171 @@
 #species {
-  padding: 0 $gapX;
+  padding: 10rem $paddingX;
   .container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(31rem, 1fr));
-    gap: $gapX;
-
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: rgb(245, 245, 245);
+    flex-wrap: wrap;
     .images {
-      min-height: 60rem;
+      flex: 1 1 31rem;
+      min-height: 35rem;
       position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
       img {
         position: absolute;
-        box-shadow: $box-shadow;
+        object-fit: cover;
+        box-shadow: $boxShadow;
       }
       img:nth-of-type(1) {
-        width: 110%;
-        max-width: 45rem;
-        top: 50%;
-        left: 15%;
-        transform: translate(-50%, -50%) rotate(-7deg);
+        top: -8rem;
+        left: 2rem;
+        width: 34rem;
+        height: 34rem;
         z-index: 2;
-        @media (max-width: 699px) {
-          top: 45%;
-        }
       }
       img:nth-of-type(2) {
-        width: 45%;
-        max-width: 25rem;
-        top: 10%;
-        left: 70%;
-        transform: translate(-50%, -50%);
-        z-index: 1;
-        @media (max-width: 666px) {
-          left: 85%;
-        }
+        top: 5rem;
+        right: -2rem;
+        width: 24rem;
+        height: 24rem;
+        z-index: 3;
       }
       img:nth-of-type(3) {
-        width: 55%;
-        max-width: 28rem;
-        top: 90%;
-        left: 60%;
-        transform: translate(-50%, -50%) rotate(3deg);
-        z-index: 3;
-
-        @media (max-width: 699px) {
-          top: 85%;
-        }
+        bottom: -8rem;
+        right: 16rem;
+        width: 20rem;
+        height: 20rem;
+        z-index: 2;
       }
     }
     .text {
-      padding: $gapY 0;
-      align-self: center;
+      flex: 1 1 31rem;
+      padding: 4rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+  @media (max-width: 1024px) {
+    padding: 6rem $paddingX;
+    .container {
+      .images {
+        img:nth-of-type(1) {
+          top: -6rem;
+          left: 0;
+          width: 34rem;
+          height: 34rem;
+        }
+        img:nth-of-type(2) {
+          top: 5rem;
+          right: -2rem;
+          width: 24rem;
+          height: 24rem;
+        }
+        img:nth-of-type(3) {
+          bottom: -4rem;
+          right: 16rem;
+          width: 20rem;
+          height: 20rem;
+        }
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    .container {
+      .images {
+        img:nth-of-type(1) {
+          top: -2rem;
+          left: 0;
+          width: 25rem;
+          height: 25rem;
+        }
+        img:nth-of-type(2) {
+          top: 10rem;
+          right: -1.6rem;
+          width: 18rem;
+          height: 18rem;
+        }
+        img:nth-of-type(3) {
+          bottom: -2rem;
+          right: 10rem;
+          width: 21rem;
+          height: 21rem;
+        }
+      }
+    }
+  }
+  @media (max-width: 540px) {
+    padding: 6rem $paddingX 0 $paddingX;
+    .container {
+      .images {
+        img:nth-of-type(1) {
+          top: -6rem;
+          left: -1.6rem;
+          width: 32rem;
+          height: 32rem;
+        }
+        img:nth-of-type(2) {
+          top: 4rem;
+          right: -1.6rem;
+          width: 18rem;
+          height: 18rem;
+        }
+        img:nth-of-type(3) {
+          bottom: -4rem;
+          right: 8rem;
+          width: 18rem;
+          height: 18rem;
+        }
+      }
+    }
+  }
+  @media (max-width: 414px) {
+    padding: 6rem $paddingX 0 $paddingX;
+    .container {
+      .images {
+        img:nth-of-type(1) {
+          top: -6rem;
+          left: -1.6rem;
+          width: 30rem;
+          height: 30rem;
+        }
+        img:nth-of-type(2) {
+          top: 4rem;
+          right: -1.6rem;
+          width: 16rem;
+          height: 16rem;
+        }
+        img:nth-of-type(3) {
+          bottom: -2rem;
+          right: 6rem;
+          width: 18rem;
+          height: 18rem;
+        }
+      }
+    }
+  }
+  @media (max-width: 375px) {
+    padding: 4rem $paddingX 0 $paddingX;
+    .container {
+      .images {
+        img:nth-of-type(1) {
+          top: -2rem;
+          left: -1.6rem;
+          width: 25rem;
+          height: 25rem;
+        }
+        img:nth-of-type(2) {
+          top: 6rem;
+          right: -1.6rem;
+          width: 16rem;
+          height: 16rem;
+        }
+        img:nth-of-type(3) {
+          bottom: 0;
+          right: 6rem;
+          width: 14rem;
+          height: 14rem;
+        }
+      }
     }
   }
 }

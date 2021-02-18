@@ -4,9 +4,9 @@
   top: 0;
   left: 0;
   z-index: 1000;
-  padding: 0 $gapX;
+  padding: 0 $paddingX;
   background-color: #000;
-  color: $font-color-light;
+  color: $textLight;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 
   .container {
@@ -14,10 +14,15 @@
     justify-content: space-between;
     align-items: center;
 
-    .logo {
-      width: 10rem;
-      height: 10rem;
+    a.logo {
+      width: 75px;
+      height: 75px;
       cursor: pointer;
+
+      svg {
+        width: 100%;
+        height: 100%;
+      }
     }
 
     .desktop-menu {
@@ -27,33 +32,58 @@
         margin-right: 3rem;
       }
 
-      li {
+      li a {
         cursor: pointer;
+        color: $textLight;
+        transition: 0.4s;
+
+        &:hover {
+          color: $textLightest;
+        }
       }
     }
 
     .mobile-menu {
+      overflow: hidden;
       display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+
       > div:not(:last-child) {
         margin-bottom: 9px;
       }
+
       div {
         height: 3px;
         width: 2.7rem;
-        background-color: $font-color-lightest;
+        background-color: $textLightest;
         border-radius: 2px;
+        transition: 0.4s;
       }
-      cursor: pointer;
+
+      &.active {
+        div:nth-of-type(1) {
+          transform: translateY(12px) rotate(-45deg);
+        }
+        div:nth-of-type(2) {
+          transform: translateX(-10rem);
+        }
+        div:nth-of-type(3) {
+          transform: translateY(-12px) rotate(45deg);
+        }
+      }
     }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 812px) {
     .container {
       .desktop-menu {
         display: none;
       }
       .mobile-menu {
-        display: block;
+        display: flex;
       }
     }
   }

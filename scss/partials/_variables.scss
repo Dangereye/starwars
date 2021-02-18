@@ -1,13 +1,19 @@
-$font-size: clamp(1.6rem, 2.5vw, 2rem);
+$fontSize: clamp(1.6rem, 2.5vw, 1.8rem);
 
-$font-color-dark: rgb(27, 27, 27);
-$font-color-darkest: rgb(0, 0, 0);
+$warning: rgb(255, 104, 117);
+$info: rgb(152, 186, 255);
 
-$font-color-light: rgb(247, 247, 247);
-$font-color-lightest: rgb(255, 255, 255);
+$textDark: rgb(27, 27, 27);
+$textDarkest: rgb(0, 0, 0);
 
-$gapX: clamp(1.6rem, 3vw, 4rem);
-$gapY: 4rem;
+$textLight: rgb(204, 204, 204);
+$textLightest: rgb(255, 255, 255);
+$linkColor: #028cdb;
 
-$box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2), 0 10px 15px rgba(0, 0, 0, 0.3),
-  0 20px 25px rgba(0, 0, 0, 0.2);
+$paddingX: clamp(1.6rem, 3vw, 4rem);
+$paddingY: 8rem;
+
+$bgDarkest: #000;
+
+$boxShadow: 0 5px 5px rgba(0, 0, 0, 0.1), 0 10px 15px rgba(0, 0, 0, 0.1),
+  0 20px 25px rgba(0, 0, 0, 0.1);

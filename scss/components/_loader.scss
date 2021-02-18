@@ -1,25 +1,25 @@
 .loader {
-  padding: $gapY gapX;
+  padding: $paddingY paddingX;
   width: 100%;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #000;
+  background-color: $bgDarkest;
 
   .spinner {
     width: 6rem;
     height: 6rem;
     border-radius: 50%;
     border: 5px solid transparent;
-    border-color: $font-color-lightest transparent;
+    border-color: $textLightest transparent;
     margin-bottom: 4rem;
     animation: rotate 1.5s linear infinite;
   }
 
   .text {
-    color: $font-color-lightest;
+    color: $textLightest;
   }
 }
 
