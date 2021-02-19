@@ -1,0 +1,70 @@
+.person-item {
+  display: flex;
+  cursor: pointer;
+  transition: 0.4s;
+
+  .gender {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $textDark;
+    svg {
+      width: 3rem;
+      height: 3rem;
+      fill: #fff;
+    }
+    &.male {
+      background-color: #6eb9fa;
+      svg {
+        path {
+          fill: #fff;
+        }
+      }
+    }
+    &.female {
+      background-color: #faa7b5;
+      svg {
+        path {
+          fill: #fff;
+        }
+      }
+    }
+    &.hermaphrodite {
+      background-color: #faf3c0;
+      svg {
+        fill: #000;
+      }
+    }
+    &.spinner {
+      svg {
+        animation: spinner 1s linear infinite forwards;
+      }
+    }
+  }
+
+  .info {
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(245, 244, 244);
+    h4 {
+      color: $textDark;
+    }
+  }
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+@keyframes spinner {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import Loader from "../components/Loader";
 import Message from "../components/Message";
 import MovieHeader from "../components/movies/MovieHeader";
+import GridList from "../components/GridList";
 import useFetch from "../hooks/useFetch";
 
 const Movie = () => {
@@ -33,6 +34,7 @@ const Movie = () => {
           director={movie.director}
           producer={movie.producer}
         />
+        <GridList title="Characters" list={movie.characters} path="/person" />
       </>
     );
   }

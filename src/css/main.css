@@ -858,6 +858,120 @@ section.homepage-section .container .text {
   z-index: 1;
 }
 
+.grid-list {
+  padding: 2rem 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(25rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 1rem;
+}
+
+.person-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.person-item .gender {
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #1b1b1b;
+}
+
+.person-item .gender svg {
+  width: 3rem;
+  height: 3rem;
+  fill: #fff;
+}
+
+.person-item .gender.male {
+  background-color: #6eb9fa;
+}
+
+.person-item .gender.male svg path {
+  fill: #fff;
+}
+
+.person-item .gender.female {
+  background-color: #faa7b5;
+}
+
+.person-item .gender.female svg path {
+  fill: #fff;
+}
+
+.person-item .gender.hermaphrodite {
+  background-color: #faf3c0;
+}
+
+.person-item .gender.hermaphrodite svg {
+  fill: #000;
+}
+
+.person-item .gender.spinner svg {
+  -webkit-animation: spinner 1s linear infinite forwards;
+          animation: spinner 1s linear infinite forwards;
+}
+
+.person-item .info {
+  width: 100%;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #f5f4f4;
+}
+
+.person-item .info h4 {
+  color: #1b1b1b;
+}
+
+.person-item:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+@-webkit-keyframes spinner {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spinner {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
 footer {
   padding: 1rem clamp(1.6rem, 3vw, 4rem);
   background-color: #000;

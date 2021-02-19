@@ -27,21 +27,6 @@ const Species = () => {
             alt="Yodas"
             title="Photo by Aksel Fristrup on Unsplash."
           />
-          {/* <img
-            src={dathomirian}
-            alt="Dathomirian"
-            title="Image by tunechick83 from Pixabay."
-          />
-          <img
-            src={mandalorian}
-            alt="Mandalorian"
-            title="Photo by Brett Sayles from Pexels."
-          />
-          <img
-            src={tuskens}
-            alt="Tusken raiders"
-            title="Image by bxato from Pixabay "
-          /> */}
         </div>
         <div className="text">
           <h4>Explore</h4>
