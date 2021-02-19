@@ -1,9 +1,9 @@
-.person-item {
+.list-item {
   display: flex;
   cursor: pointer;
   transition: 0.4s;
 
-  .gender {
+  .icon {
     padding: 1rem;
     display: flex;
     justify-content: center;
@@ -32,6 +32,12 @@
     }
     &.hermaphrodite {
       background-color: #faf3c0;
+      svg {
+        fill: #000;
+      }
+    }
+    &.species {
+      background-color: #d4fab4;
       svg {
         fill: #000;
       }

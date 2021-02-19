@@ -1,5 +1,6 @@
 import React from "react";
 import PersonItem from "./PersonItem";
+import SpeciesItem from "./SpeciesItem";
 
 const GridList = ({ title, list, path }) => {
   return (
@@ -11,6 +12,16 @@ const GridList = ({ title, list, path }) => {
             list.map((person, index) => {
               return (
                 <PersonItem key={`person-${index}`} url={person} path={path} />
+              );
+            })}
+          {path === "/species" &&
+            list.map((species, index) => {
+              return (
+                <SpeciesItem
+                  key={`species-${index}`}
+                  url={species}
+                  path={path}
+                />
               );
             })}
         </div>

@@ -12,9 +12,9 @@ const PersonItem = ({ url, path }) => {
   const id = url.match(/\d{1,2}/g);
 
   return (
-    <Link className="person-item" to={`${path}/${id}`}>
+    <Link className="list-item" to={`${path}/${id}`}>
       <div
-        className={`gender ${
+        className={`icon ${
           isLoading ? "spinner" : person ? person.gender : ""
         }`}
       >

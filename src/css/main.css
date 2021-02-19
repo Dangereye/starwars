@@ -867,7 +867,7 @@ section.homepage-section .container .text {
   gap: 1rem;
 }
 
-.person-item {
+.list-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -876,7 +876,7 @@ section.homepage-section .container .text {
   transition: 0.4s;
 }
 
-.person-item .gender {
+.list-item .icon {
   padding: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -890,42 +890,50 @@ section.homepage-section .container .text {
   background-color: #1b1b1b;
 }
 
-.person-item .gender svg {
+.list-item .icon svg {
   width: 3rem;
   height: 3rem;
   fill: #fff;
 }
 
-.person-item .gender.male {
+.list-item .icon.male {
   background-color: #6eb9fa;
 }
 
-.person-item .gender.male svg path {
+.list-item .icon.male svg path {
   fill: #fff;
 }
 
-.person-item .gender.female {
+.list-item .icon.female {
   background-color: #faa7b5;
 }
 
-.person-item .gender.female svg path {
+.list-item .icon.female svg path {
   fill: #fff;
 }
 
-.person-item .gender.hermaphrodite {
+.list-item .icon.hermaphrodite {
   background-color: #faf3c0;
 }
 
-.person-item .gender.hermaphrodite svg {
+.list-item .icon.hermaphrodite svg {
   fill: #000;
 }
 
-.person-item .gender.spinner svg {
+.list-item .icon.species {
+  background-color: #d4fab4;
+}
+
+.list-item .icon.species svg {
+  fill: #000;
+}
+
+.list-item .icon.spinner svg {
   -webkit-animation: spinner 1s linear infinite forwards;
           animation: spinner 1s linear infinite forwards;
 }
 
-.person-item .info {
+.list-item .info {
   width: 100%;
   padding: 1rem;
   display: -webkit-box;
@@ -941,11 +949,11 @@ section.homepage-section .container .text {
   background-color: #f5f4f4;
 }
 
-.person-item .info h4 {
+.list-item .info h4 {
   color: #1b1b1b;
 }
 
-.person-item:hover {
+.list-item:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
 }
