@@ -2,6 +2,8 @@ import React from "react";
 import PersonItem from "./PersonItem";
 import PlanetItem from "./PlanetItem";
 import SpeciesItem from "./SpeciesItem";
+import StarshipItem from "./StarshipItem";
+import VehicleItem from "./VehicleItem";
 
 const GridList = ({ title, list, path }) => {
   return (
@@ -27,6 +29,26 @@ const GridList = ({ title, list, path }) => {
                 <SpeciesItem
                   key={`species-${index}`}
                   url={species}
+                  path={path}
+                />
+              );
+            })}
+          {path === "/starship" &&
+            list.map((starship, index) => {
+              return (
+                <StarshipItem
+                  key={`starship-${index}`}
+                  url={starship}
+                  path={path}
+                />
+              );
+            })}
+          {path === "/vehicle" &&
+            list.map((vehicle, index) => {
+              return (
+                <VehicleItem
+                  key={`vehicle-${index}`}
+                  url={vehicle}
                   path={path}
                 />
               );

@@ -1,33 +1,33 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { IoPlanetSharp } from "react-icons/io5";
+import useFetch from "../hooks/useFetch";
+import { GiTank } from "react-icons/gi";
 import { ImSpinner9 } from "react-icons/im";
 import { MdErrorOutline } from "react-icons/md";
-import useFetch from "../hooks/useFetch";
+import { Link } from "react-router-dom";
 
-const PlanetItem = ({ url, path }) => {
-  const { isLoading, error, data: planet } = useFetch(url);
+const VehicleItem = ({ url, path }) => {
+  const { isLoading, error, data: vehicle } = useFetch(url);
   const id = url.match(/\d{1,2}/g);
   return (
     <Link className="list-item" to={`${path}/${id}`}>
-      <div className="icon planets">
+      <div className="icon vehicle">
         {isLoading ? (
           <ImSpinner9 />
         ) : error ? (
           <MdErrorOutline />
-        ) : planet ? (
-          <IoPlanetSharp />
+        ) : vehicle ? (
+          <GiTank />
         ) : (
           ""
         )}
       </div>
       <div className="info">
-        <h4>{error ? "" : planet ? planet.name : "loading name.."}</h4>
+        <h4>{error ? "" : vehicle ? vehicle.name : "loading name.."}</h4>
         <p>
           {error
             ? "Error fetching data."
-            : planet
-            ? planet.climate
+            : vehicle
+            ? vehicle.model
             : "loading climate.."}
         </p>
       </div>
@@ -35,4 +35,4 @@ const PlanetItem = ({ url, path }) => {
   );
 };
 
-export default PlanetItem;
+export default VehicleItem;

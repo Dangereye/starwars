@@ -862,8 +862,8 @@ section.homepage-section .container .text {
   padding: 2rem 0;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(25rem, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  -ms-grid-columns: (minmax(30rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   gap: 1rem;
 }
 
@@ -929,10 +929,26 @@ section.homepage-section .container .text {
 }
 
 .list-item .icon.planets {
-  background-color: #000;
+  background-color: #ad7b2a;
 }
 
 .list-item .icon.planets svg {
+  fill: #fff;
+}
+
+.list-item .icon.starship {
+  background-color: #fa5c59;
+}
+
+.list-item .icon.starship svg {
+  fill: #fff;
+}
+
+.list-item .icon.vehicle {
+  background-color: #6e76fa;
+}
+
+.list-item .icon.vehicle svg {
   fill: #fff;
 }
 
@@ -959,6 +975,7 @@ section.homepage-section .container .text {
 
 .list-item .info h4 {
   color: #1b1b1b;
+  font-size: 1.6rem;
 }
 
 .list-item .info p {

@@ -43,7 +43,19 @@
       }
     }
     &.planets {
-      background-color: #000;
+      background-color: #ad7b2a;
+      svg {
+        fill: #fff;
+      }
+    }
+    &.starship {
+      background-color: #fa5c59;
+      svg {
+        fill: #fff;
+      }
+    }
+    &.vehicle {
+      background-color: #6e76fa;
       svg {
         fill: #fff;
       }
@@ -64,6 +76,7 @@
     background-color: rgb(245, 244, 244);
     h4 {
       color: $textDark;
+      font-size: 1.6rem;
     }
     p {
       font-size: 1.4rem;
