@@ -61,6 +61,11 @@ button > *:not(:last-child),
   margin-right: 8px;
 }
 
+button.btn-back,
+.btn.btn-back {
+  color: #1b1b1b;
+}
+
 button.btn-dark,
 .btn.btn-dark {
   color: #fff;
@@ -84,6 +89,12 @@ button.btn-large,
   padding: 16px 32px;
 }
 
+button.btn-large:hover,
+.btn.btn-large:hover {
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+}
+
 button.btn-medium,
 .btn.btn-medium {
   padding: 10px 20px;
@@ -92,12 +103,6 @@ button.btn-medium,
 button.btn-small,
 .btn.btn-small {
   padding: 5px 10px;
-}
-
-button:hover,
-.btn:hover {
-  -webkit-transform: translateY(-2px);
-          transform: translateY(-2px);
 }
 
 p + button,
@@ -928,11 +933,11 @@ section.homepage-section .container .text {
   fill: #000;
 }
 
-.list-item .icon.planets {
+.list-item .icon.planet {
   background-color: #ad7b2a;
 }
 
-.list-item .icon.planets svg {
+.list-item .icon.planet svg {
   fill: #fff;
 }
 

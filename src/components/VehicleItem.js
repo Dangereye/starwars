@@ -10,7 +10,9 @@ const VehicleItem = ({ url, path }) => {
   const id = url.match(/\d{1,2}/g);
   return (
     <Link className="list-item" to={`${path}/${id}`}>
-      <div className="icon vehicle">
+      <div
+        className={`icon ${isLoading ? "spinner" : vehicle ? "vehicle" : ""}`}
+      >
         {isLoading ? (
           <ImSpinner9 />
         ) : error ? (

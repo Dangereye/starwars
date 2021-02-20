@@ -5,6 +5,7 @@ import Message from "../components/Message";
 import MovieHeader from "../components/movies/MovieHeader";
 import GridList from "../components/GridList";
 import useFetch from "../hooks/useFetch";
+import PreviousPage from "../components/PreviousPage";
 
 const Movie = () => {
   const { id } = useParams();
@@ -21,6 +22,7 @@ const Movie = () => {
   if (movie) {
     return (
       <>
+        <PreviousPage />
         <MovieHeader
           id={id}
           title={movie.title}

@@ -11,6 +11,9 @@ button,
   > *:not(:last-child) {
     margin-right: 8px;
   }
+  &.btn-back {
+    color: $textDark;
+  }
 
   &.btn-dark {
     color: #fff;
@@ -29,6 +32,9 @@ button,
 
   &.btn-large {
     padding: 16px 32px;
+    &:hover {
+      transform: translateY(-2px);
+    }
   }
 
   &.btn-medium {
@@ -37,10 +43,6 @@ button,
 
   &.btn-small {
     padding: 5px 10px;
-  }
-
-  &:hover {
-    transform: translateY(-2px);
   }
 }
 
