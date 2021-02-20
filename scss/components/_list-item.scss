@@ -42,6 +42,12 @@
         fill: #000;
       }
     }
+    &.planets {
+      background-color: #000;
+      svg {
+        fill: #fff;
+      }
+    }
     &.spinner {
       svg {
         animation: spinner 1s linear infinite forwards;
@@ -59,10 +65,13 @@
     h4 {
       color: $textDark;
     }
+    p {
+      font-size: 1.4rem;
+    }
   }
 
   &:hover {
-    transform: scale(1.2);
+    transform: scale(1.05);
   }
 }
 

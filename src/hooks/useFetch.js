@@ -15,8 +15,6 @@ const useFetch = (url) => {
         return res.json();
       })
       .then((data) => {
-        console.log("Fetch success.");
-        console.log(data);
         setData(data);
         setError(null);
         setIsLoading(false);

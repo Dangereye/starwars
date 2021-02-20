@@ -32,12 +32,12 @@ const MovieHeader = ({
               <span>{characters}</span>
             </div>
             <div>
-              <AiFillBug />
-              <span>{species}</span>
-            </div>
-            <div>
               <IoPlanetSharp />
               <span>{planets}</span>
+            </div>
+            <div>
+              <AiFillBug />
+              <span>{species}</span>
             </div>
             <div>
               <RiSpaceShipFill />

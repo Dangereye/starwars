@@ -928,6 +928,14 @@ section.homepage-section .container .text {
   fill: #000;
 }
 
+.list-item .icon.planets {
+  background-color: #000;
+}
+
+.list-item .icon.planets svg {
+  fill: #fff;
+}
+
 .list-item .icon.spinner svg {
   -webkit-animation: spinner 1s linear infinite forwards;
           animation: spinner 1s linear infinite forwards;
@@ -953,9 +961,13 @@ section.homepage-section .container .text {
   color: #1b1b1b;
 }
 
+.list-item .info p {
+  font-size: 1.4rem;
+}
+
 .list-item:hover {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 @-webkit-keyframes spinner {

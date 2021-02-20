@@ -35,6 +35,7 @@ const Movie = () => {
           producer={movie.producer}
         />
         <GridList title="Characters" list={movie.characters} path="/person" />
+        <GridList title="Planets" list={movie.planets} path="/planet" />
         <GridList title="Species" list={movie.species} path="/species" />
       </>
     );
