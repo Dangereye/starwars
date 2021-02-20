@@ -55,23 +55,23 @@ const PersonHeader = ({
             </div>
           </div>
           <h4>Apperance</h4>
-          <p>Height: {height}cm</p>
-          <p>Weight: {mass}kg</p>
+          <p>
+            Height: {height}
+            {height !== "unknown" ? "cm" : ""}
+          </p>
+          <p>
+            Weight: {mass}
+            {mass !== "unknown" ? "kg" : ""}
+          </p>
           <p>Hair colour: {hairColor}</p>
           <p>Eye colour: {eyeColor}</p>
           <p>Skin colour: {skinColor}</p>
-          <div className="info">
-            <div className="info-group">
-              <PersonHomeWorld url={homeWorld} />
-            </div>
-            <div className="info-group">
-              <h4>Birth year</h4>
-              <p>
-                {birthYear}{" "}
-                {birthYear !== "unknown" ? "(Before the battle of Yavin)" : ""}
-              </p>
-            </div>
-          </div>
+          <PersonHomeWorld url={homeWorld} />
+          <h4>Birth year</h4>
+          <p>
+            {birthYear}{" "}
+            {birthYear !== "unknown" ? "(Before the battle of Yavin)" : ""}
+          </p>
         </div>
       </div>
     </header>

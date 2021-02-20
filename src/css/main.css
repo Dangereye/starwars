@@ -708,6 +708,10 @@ section.homepage-section .container .text {
   margin-bottom: 1rem;
 }
 
+#person-header .container .text .homeworld {
+  margin: 2rem 0;
+}
+
 #person-header .container .text .stats {
   margin: 1rem 0 2rem 0;
   display: -webkit-box;
@@ -739,19 +743,6 @@ section.homepage-section .container .text {
 
 #person-header .container .text .stats div span {
   margin-left: 5px;
-}
-
-#person-header .container .text .info {
-  margin-top: 2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-#person-header .container .text .info > *:not(:last-child) {
-  margin-right: 4rem;
 }
 
 @media (max-width: 568px) {
@@ -1003,8 +994,8 @@ section.homepage-section .container .text {
   padding: 2rem 0;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(30rem, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  -ms-grid-columns: (minmax(30rem, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
   gap: 1rem;
 }
 
@@ -1096,6 +1087,24 @@ section.homepage-section .container .text {
 .list-item .icon.spinner svg {
   -webkit-animation: spinner 1s linear infinite forwards;
           animation: spinner 1s linear infinite forwards;
+}
+
+.list-item.movie {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.list-item.movie .image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.list-item.movie .info {
+  background-color: #fff;
 }
 
 .list-item .info {

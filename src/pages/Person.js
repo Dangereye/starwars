@@ -4,6 +4,7 @@ import Loader from "../components/Loader";
 import Message from "../components/Message";
 import PersonHeader from "../components/movies/PersonHeader";
 import PreviousPage from "../components/PreviousPage";
+import GridList from "../components/GridList";
 import useFetch from "../hooks/useFetch";
 
 const Person = () => {
@@ -38,11 +39,21 @@ const Person = () => {
           starships={person.starships.length}
           vehicles={person.vehicles.length}
         />
-        {/* <GridList title="Characters" list={movie.characters} path="/person" />
-            <GridList title="Planets" list={movie.planets} path="/planet" />
-            <GridList title="Species" list={movie.species} path="/species" />
-            <GridList title="Starships" list={movie.starships} path="/starship" />
-            <GridList title="Vehicles" list={movie.vehicles} path="/vehicle" /> */}
+        <GridList title="Movie credits" list={person.films} path="/movie" />
+        {person.starships.length > 0 && (
+          <GridList
+            title="Starships piloted"
+            list={person.starships}
+            path="/starship"
+          />
+        )}
+        {person.vehicles.length > 0 && (
+          <GridList
+            title="Vehicles piloted"
+            list={person.vehicles}
+            path="/vehicle"
+          />
+        )}
       </>
     );
   }

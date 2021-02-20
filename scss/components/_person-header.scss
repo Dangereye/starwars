@@ -43,6 +43,10 @@
         margin-bottom: 1rem;
       }
 
+      .homeworld {
+        margin: 2rem 0;
+      }
+
       .stats {
         margin: 1rem 0 2rem 0;
         display: flex;
@@ -63,15 +67,6 @@
           span {
             margin-left: 5px;
           }
-        }
-      }
-      .info {
-        margin-top: 2rem;
-        display: flex;
-        flex-wrap: wrap;
-
-        > *:not(:last-child) {
-          margin-right: 4rem;
         }
       }
     }

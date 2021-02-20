@@ -1,4 +1,5 @@
 import React from "react";
+import MovieItem from "./MovieItem";
 import PersonItem from "./PersonItem";
 import PlanetItem from "./PlanetItem";
 import SpeciesItem from "./SpeciesItem";
@@ -51,6 +52,12 @@ const GridList = ({ title, list, path }) => {
                   url={vehicle}
                   path={path}
                 />
+              );
+            })}
+          {path === "/movie" &&
+            list.map((movie, index) => {
+              return (
+                <MovieItem key={`movie-${index}`} url={movie} path={path} />
               );
             })}
         </div>
