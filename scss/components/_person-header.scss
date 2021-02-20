@@ -1,0 +1,85 @@
+#person-header {
+  padding: 4rem $paddingX;
+  .container {
+    display: flex;
+    .icon {
+      flex: 1 1 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $textDark;
+      svg {
+        width: 100%;
+        height: 100%;
+        fill: #fff;
+      }
+      &.male {
+        background-color: #6eb9fa;
+        svg {
+          fill: #fff;
+        }
+      }
+      &.female {
+        background-color: #faa7b5;
+        svg {
+          fill: #fff;
+        }
+      }
+      &.hermaphrodite {
+        background-color: #faf3c0;
+        svg {
+          fill: #000;
+        }
+      }
+    }
+    .text {
+      flex: 1 1 50%;
+      padding-left: 4rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      h4 {
+        margin-bottom: 1rem;
+      }
+
+      .stats {
+        margin: 1rem 0 2rem 0;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        font-size: 1.5rem;
+        color: rgb(85, 85, 85);
+        > div:not(:last-child) {
+          &::after {
+            margin: 0 1rem;
+            font-size: 2rem;
+            content: "|";
+          }
+        }
+        div {
+          display: flex;
+          align-items: center;
+          span {
+            margin-left: 5px;
+          }
+        }
+      }
+      .info {
+        margin-top: 2rem;
+        display: flex;
+        flex-wrap: wrap;
+
+        > *:not(:last-child) {
+          margin-right: 4rem;
+        }
+      }
+    }
+    @media (max-width: 568px) {
+      flex-direction: column;
+      .text {
+        padding: 4rem 0 0 0;
+      }
+    }
+  }
+}

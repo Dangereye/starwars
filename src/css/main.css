@@ -64,6 +64,7 @@ button > *:not(:last-child),
 button.btn-back,
 .btn.btn-back {
   color: #1b1b1b;
+  background-color: transparent;
 }
 
 button.btn-dark,
@@ -626,6 +627,141 @@ section.homepage-section .container .text {
             flex-direction: column;
   }
   #movie-header .container .text {
+    padding: 4rem 0 0 0;
+  }
+}
+
+#person-header {
+  padding: 4rem clamp(1.6rem, 3vw, 4rem);
+}
+
+#person-header .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#person-header .container .icon {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 50%;
+          flex: 1 1 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #1b1b1b;
+}
+
+#person-header .container .icon svg {
+  width: 100%;
+  height: 100%;
+  fill: #fff;
+}
+
+#person-header .container .icon.male {
+  background-color: #6eb9fa;
+}
+
+#person-header .container .icon.male svg {
+  fill: #fff;
+}
+
+#person-header .container .icon.female {
+  background-color: #faa7b5;
+}
+
+#person-header .container .icon.female svg {
+  fill: #fff;
+}
+
+#person-header .container .icon.hermaphrodite {
+  background-color: #faf3c0;
+}
+
+#person-header .container .icon.hermaphrodite svg {
+  fill: #000;
+}
+
+#person-header .container .text {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 50%;
+          flex: 1 1 50%;
+  padding-left: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#person-header .container .text h4 {
+  margin-bottom: 1rem;
+}
+
+#person-header .container .text .stats {
+  margin: 1rem 0 2rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.5rem;
+  color: #555555;
+}
+
+#person-header .container .text .stats > div:not(:last-child)::after {
+  margin: 0 1rem;
+  font-size: 2rem;
+  content: "|";
+}
+
+#person-header .container .text .stats div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#person-header .container .text .stats div span {
+  margin-left: 5px;
+}
+
+#person-header .container .text .info {
+  margin-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#person-header .container .text .info > *:not(:last-child) {
+  margin-right: 4rem;
+}
+
+@media (max-width: 568px) {
+  #person-header .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #person-header .container .text {
     padding: 4rem 0 0 0;
   }
 }

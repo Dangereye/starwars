@@ -10,6 +10,7 @@ import Planets from "./pages/Planets";
 import Species from "./pages/Species";
 import Starships from "./pages/Starships";
 import Vehicles from "./pages/Vehicles";
+import Person from "./pages/Person";
 
 const App = () => {
   const [MenuIsOpen, setMenuIsOpen] = useState(false);
@@ -27,7 +28,7 @@ const App = () => {
           <Route path="/" exact component={Home} />
           <Route path="/movie/:id" component={Movies} />
           <Route path="/people" component={People} />
-          <Route path="/person/:id" component={People} />
+          <Route path="/person/:id" component={Person} />
           <Route path="/planets" component={Planets} />
           <Route path="/planet/:id" component={Planets} />
           <Route path="/species" component={Species} />
