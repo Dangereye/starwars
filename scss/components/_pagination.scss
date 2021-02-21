@@ -1,0 +1,29 @@
+.pagination {
+  color: #fff;
+  padding: 2rem $paddingX;
+  background-color: #000;
+  .container {
+    display: flex;
+    justify-content: center;
+    > *:not(:last-child) {
+      margin-right: 1rem;
+    }
+    span,
+    div {
+      padding: 0.5rem 1rem;
+    }
+    span {
+      user-select: none;
+    }
+    div {
+      border: 1px solid rgb(107, 107, 107);
+      cursor: pointer;
+      transition: 0.4s;
+
+      &.active,
+      &:hover {
+        border-color: #fff;
+      }
+    }
+  }
+}
