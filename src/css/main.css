@@ -444,7 +444,7 @@ section.homepage-section .container .text {
   }
 }
 
-#movies {
+.card-list {
   position: relative;
   background-position: center;
   background-size: cover;
@@ -452,21 +452,21 @@ section.homepage-section .container .text {
   padding: 8rem clamp(1.6rem, 3vw, 4rem);
 }
 
-#movies .container {
+.card-list .container {
   z-index: 3;
 }
 
-#movies .container h4,
-#movies .container h2 {
+.card-list .container h4,
+.card-list .container h2 {
   color: #fff;
   text-align: center;
 }
 
-#movies .container h2.section-title {
+.card-list .container h2 {
   margin-bottom: 10rem;
 }
 
-#movies .container .movies {
+.card-list .container .items {
   margin-top: 4rem;
   display: -ms-grid;
   display: grid;
@@ -475,7 +475,24 @@ section.homepage-section .container .text {
   gap: 8rem;
 }
 
-#movies .container .movies .movie-card {
+@media (max-width: 666px) {
+  .card-list {
+    padding: 4rem clamp(1.6rem, 3vw, 4rem);
+  }
+}
+
+.card-list::after {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  display: block;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -495,7 +512,7 @@ section.homepage-section .container .text {
           box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
 }
 
-#movies .container .movies .movie-card img {
+.card img {
   display: block;
   position: relative;
   top: -4rem;
@@ -504,34 +521,66 @@ section.homepage-section .container .text {
           box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1), 0 10px 15px rgba(0, 0, 0, 0.1), 0 20px 25px rgba(0, 0, 0, 0.1);
 }
 
-#movies .container .movies .movie-card .movie-info {
+.card .icon {
+  width: 100%;
+  height: 40rem;
   position: relative;
-  top: -2rem;
-  padding: 2rem 0;
+  top: -4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #000;
 }
 
-#movies .container .movies .movie-card .movie-info h4,
-#movies .container .movies .movie-card .movie-info h3 {
+.card .icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.card .icon svg path {
+  fill: #fff;
+}
+
+.card .icon.male {
+  background-color: #6eb9fa;
+}
+
+.card .icon.male svg path {
+  fill: #fff;
+}
+
+.card .icon.female {
+  background-color: #faa7b5;
+}
+
+.card .icon.female svg path {
+  fill: #fff;
+}
+
+.card .icon.hermaphrodite {
+  background-color: #faf3c0;
+}
+
+.card .icon.hermaphrodite svg {
+  fill: #000;
+}
+
+.card .info h4,
+.card .info h3 {
   text-align: left;
   color: black;
   margin-bottom: 1rem;
 }
 
-@media (max-width: 666px) {
-  #movies {
-    padding: 4rem clamp(1.6rem, 3vw, 4rem);
-  }
-}
-
-#movies::after {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  content: "";
-  display: block;
-  background-color: rgba(0, 0, 0, 0.7);
+.card .info .year {
+  display: inline-block;
+  margin-bottom: 3rem;
 }
 
 #movie-header {
@@ -996,7 +1045,7 @@ section.homepage-section .container .text {
   display: grid;
   -ms-grid-columns: (minmax(30rem, 1fr))[auto-fill];
       grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
-  gap: 1rem;
+  gap: 2rem;
 }
 
 .list-item {

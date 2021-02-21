@@ -1,6 +1,5 @@
 import React from "react";
 import { MdLocalMovies } from "react-icons/md";
-import { IoPeopleSharp, IoPlanetSharp } from "react-icons/io5";
 import { RiSpaceShipFill } from "react-icons/ri";
 import { GiTank } from "react-icons/gi";
 import { IoMdFemale, IoMdMale } from "react-icons/io";

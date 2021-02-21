@@ -13,14 +13,24 @@ const MovieItem = ({ url, path }) => {
         <img src={MovieCovers[id - 1]} alt={movie ? movie.title : ""} />
       </div>
       <div className="info">
-        <h4>{error ? "" : movie ? movie.title : "loading name.."}</h4>
+        <h4>
+          {error
+            ? ""
+            : movie
+            ? movie.title
+            : isLoading
+            ? "loading title.."
+            : ""}
+        </h4>
         <p>
           {error ? (
             "Error fetching data."
           ) : movie ? (
             <Year date={movie.release_date} />
-          ) : (
+          ) : isLoading ? (
             "loading release year.."
+          ) : (
+            ""
           )}
         </p>
       </div>

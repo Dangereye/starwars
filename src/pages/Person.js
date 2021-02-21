@@ -22,7 +22,6 @@ const Person = () => {
   if (person) {
     return (
       <>
-        {console.log("Person: ", person)}
         <PreviousPage />
         <PersonHeader
           homeWorld={person.homeworld}

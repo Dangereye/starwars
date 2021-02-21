@@ -9,7 +9,7 @@ export const HomePageSectionsData = {
       thanks: "Photo by Markus Spiske on Unsplash.",
     },
     text: {
-      title: "82 Characters",
+      title: "Characters",
       paragraph:
         "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed corporis in accusamus reprehenderit, possimus provident unde! Harum, explicabo?",
       color: "",
@@ -28,7 +28,7 @@ export const HomePageSectionsData = {
       thanks: "Photo by Hello I'm Nik on Unsplash.",
     },
     text: {
-      title: "39 Vehicles",
+      title: "Vehicles",
       paragraph:
         "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed corporis in accusamus reprehenderit, possimus provident unde! Harum, explicabo?",
       color: "",
@@ -47,7 +47,7 @@ export const HomePageSectionsData = {
       thanks: "Photo by Brian McGowan on Unsplash.",
     },
     text: {
-      title: "36 Starships",
+      title: "Starships",
       paragraph:
         "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed corporis in accusamus reprehenderit, possimus provident unde! Harum, explicabo?",
       color: "",

@@ -2,9 +2,6 @@ import React from "react";
 import wookie from "../../images/wookie.jpg";
 import twilek from "../../images/twilek.jpg";
 import yodas from "../../images/yodas.jpg";
-// import dathomirian from "../../images/dathomirian.jpg";
-// import mandalorian from "../../images/mandalorian.jpg";
-// import tuskens from "../../images/tuskens.jpg";
 import Button from "../Button";
 
 const Species = () => {
@@ -30,7 +27,7 @@ const Species = () => {
         </div>
         <div className="text">
           <h4>Explore</h4>
-          <h2 className="section-title">37 Species</h2>
+          <h2>Species</h2>
           <p>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed
             corporis in accusamus reprehenderit, possimus provident unde! Harum,

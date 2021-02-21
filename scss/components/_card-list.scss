@@ -1,0 +1,41 @@
+.card-list {
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 8rem $paddingX;
+
+  .container {
+    z-index: 3;
+    h4,
+    h2 {
+      color: #fff;
+      text-align: center;
+    }
+    h2 {
+      margin-bottom: 10rem;
+    }
+
+    .items {
+      margin-top: 4rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(31rem, 1fr));
+      gap: 8rem;
+    }
+  }
+
+  @media (max-width: 666px) {
+    padding: 4rem $paddingX;
+  }
+
+  &::after {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    display: block;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+}

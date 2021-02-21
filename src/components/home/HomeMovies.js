@@ -1,6 +1,6 @@
 import React from "react";
 import Loader from "../Loader";
-import Card from "../movies/Card";
+import MovieCard from "../movies/MovieCard";
 import background from "../../images/movies.bg.jpg";
 import Message from "../Message";
 import useFetch from "../../hooks/useFetch";
@@ -20,16 +20,16 @@ const Movies = () => {
   if (movies) {
     return (
       <section
-        id="movies"
+        className="card-list"
         style={{ backgroundImage: `url(${background})` }}
         title="Background image by ParallelVision from Pixabay"
       >
         <div className="container">
           <h4>Explore</h4>
-          <h2 className="section-title">6 Movies</h2>
-          <div className="movies">
+          <h2>6 Movies</h2>
+          <div className="items">
             {movies.results.map((movie, index) => {
-              return <Card movie={movie} key={index} id={index + 1} />;
+              return <MovieCard movie={movie} key={index} id={index + 1} />;
             })}
           </div>
         </div>

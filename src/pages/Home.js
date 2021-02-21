@@ -1,15 +1,15 @@
 import React from "react";
 import { HomePageSectionsData as data } from "../data/HomePageSectionsData";
-import HomeMovies from "../components/home/HomeMovies";
 import HomePlanets from "../components/home/HomePlanets";
 import HomeSection from "../components/home/HomeSection";
 import HomeSpecies from "../components/home/HomeSpecies";
+import CardList from "../components/CardList";
 
 const HomePage = () => {
   const { characters, vehicles, starships } = data;
   return (
     <>
-      <HomeMovies />
+      <CardList title="Movies" defaultURL="https://swapi.dev/api/films" />
       <HomeSection
         src={characters.image.src}
         alt={characters.image.alt}
@@ -42,12 +42,6 @@ const HomePage = () => {
         css={starships.button.css}
         text={starships.button.text}
       />
-      {/* <Movies />
-      <People />
-      <Planets />
-      <Species />
-      <Starships />
-      <Vehicles /> */}
     </>
   );
 };

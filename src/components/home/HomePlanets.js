@@ -11,7 +11,7 @@ const Planets = () => {
     >
       <div className="content">
         <h4>Explore</h4>
-        <h2>60 Planets</h2>
+        <h2>Planets</h2>
         <p>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed corporis
           in accusamus reprehenderit, possimus provident unde! Harum, explicabo?

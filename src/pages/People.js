@@ -1,7 +1,12 @@
 import React from "react";
+import CardList from "../components/CardList";
 
-const PeoplePage = () => {
-  return <div>people</div>;
+const People = () => {
+  return (
+    <>
+      <CardList title="Characters" defaultURL="https://swapi.dev/api/people" />
+    </>
+  );
 };
 
-export default PeoplePage;
+export default People;
