@@ -1,11 +1,11 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import Loader from "../components/Loader";
-import Message from "../components/Message";
+import Loader from "../components/shared/Loader";
+import Message from "../components/shared/Message";
 import MovieHeader from "../components/movies/MovieHeader";
-import GridList from "../components/GridList";
+import GridList from "../components/shared/GridList";
 import useFetch from "../hooks/useFetch";
-import PreviousPage from "../components/PreviousPage";
+import PreviousPage from "../components/shared/PreviousPage";
 
 const Movie = () => {
   const { id } = useParams();

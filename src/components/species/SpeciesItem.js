@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { AiFillBug } from "react-icons/ai";
 import { ImSpinner9 } from "react-icons/im";
 import { MdErrorOutline } from "react-icons/md";
-import useFetch from "../hooks/useFetch";
+import useFetch from "../../hooks/useFetch";
 
 const SpeciesItem = ({ url, path }) => {
   const { isLoading, error, data: species } = useFetch(url);

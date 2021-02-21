@@ -1,5 +1,5 @@
 import React from "react";
-import useFetch from "../hooks/useFetch";
+import useFetch from "../../hooks/useFetch";
 import { RiSpaceShipFill } from "react-icons/ri";
 import { ImSpinner9 } from "react-icons/im";
 import { MdErrorOutline } from "react-icons/md";

@@ -1,10 +1,10 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import Loader from "../components/Loader";
-import Message from "../components/Message";
-import PersonHeader from "../components/movies/PersonHeader";
-import PreviousPage from "../components/PreviousPage";
-import GridList from "../components/GridList";
+import Loader from "../components/shared/Loader";
+import Message from "../components/shared/Message";
+import PersonHeader from "../components/people/PersonHeader";
+import PreviousPage from "../components/shared/PreviousPage";
+import GridList from "../components/shared/GridList";
 import useFetch from "../hooks/useFetch";
 
 const Person = () => {

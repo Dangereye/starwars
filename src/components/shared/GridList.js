@@ -1,10 +1,10 @@
 import React from "react";
-import MovieItem from "./MovieItem";
-import PersonItem from "./PersonItem";
-import PlanetItem from "./PlanetItem";
-import SpeciesItem from "./SpeciesItem";
-import StarshipItem from "./StarshipItem";
-import VehicleItem from "./VehicleItem";
+import MovieItem from "../movies/MovieItem";
+import PersonItem from "../people/PersonItem";
+import PlanetItem from "../planets/PlanetItem";
+import SpeciesItem from "../species/SpeciesItem";
+import StarshipItem from "../starships/StarshipItem";
+import VehicleItem from "../vehicles/VehicleItem";
 
 const GridList = ({ title, list, path }) => {
   return (

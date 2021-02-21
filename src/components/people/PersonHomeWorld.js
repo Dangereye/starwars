@@ -1,5 +1,5 @@
 import React from "react";
-import useFetch from "../hooks/useFetch";
+import useFetch from "../../hooks/useFetch";
 
 const PersonHomeWorld = ({ url }) => {
   const { isLoading, error, data: homeworld } = useFetch(url);

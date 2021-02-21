@@ -1,6 +1,6 @@
 import React from "react";
 import background from "../../images/planets.jpg";
-import Button from "../Button";
+import Button from "../shared/Button";
 
 const Planets = () => {
   return (

@@ -1,8 +1,8 @@
 import React from "react";
 import { MovieCovers } from "../../data/MovieCovers";
 import { IoMdArrowRoundForward } from "react-icons/all";
-import Button from "../Button";
-import Year from "../Year";
+import Button from "../shared/Button";
+import Year from "../shared/Year";
 
 const MovieCard = ({ movie, id }) => {
   return (

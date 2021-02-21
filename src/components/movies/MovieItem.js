@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import useFetch from "../hooks/useFetch";
-import { MovieCovers } from "../data/MovieCovers";
-import Year from "./Year";
+import useFetch from "../../hooks/useFetch";
+import { MovieCovers } from "../../data/MovieCovers";
+import Year from "../shared/Year";
 
 const MovieItem = ({ url, path }) => {
   const { isLoading, error, data: movie } = useFetch(url);
@@ -19,7 +19,7 @@ const MovieItem = ({ url, path }) => {
             : movie
             ? movie.title
             : isLoading
-            ? "loading title.."
+            ? "loading titles.."
             : ""}
         </h4>
         <p>

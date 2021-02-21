@@ -1,35 +1,33 @@
 import React from "react";
-import useFetch from "../hooks/useFetch";
-import { GiTank } from "react-icons/gi";
+import { Link } from "react-router-dom";
+import { IoPlanetSharp } from "react-icons/io5";
 import { ImSpinner9 } from "react-icons/im";
 import { MdErrorOutline } from "react-icons/md";
-import { Link } from "react-router-dom";
+import useFetch from "../../hooks/useFetch";
 
-const VehicleItem = ({ url, path }) => {
-  const { isLoading, error, data: vehicle } = useFetch(url);
+const PlanetItem = ({ url, path }) => {
+  const { isLoading, error, data: planet } = useFetch(url);
   const id = url.match(/\d{1,2}/g);
   return (
     <Link className="list-item" to={`${path}/${id}`}>
-      <div
-        className={`icon ${isLoading ? "spinner" : vehicle ? "vehicle" : ""}`}
-      >
+      <div className={`icon ${isLoading ? "spinner" : planet ? "planet" : ""}`}>
         {isLoading ? (
           <ImSpinner9 />
         ) : error ? (
           <MdErrorOutline />
-        ) : vehicle ? (
-          <GiTank />
+        ) : planet ? (
+          <IoPlanetSharp />
         ) : (
           ""
         )}
       </div>
       <div className="info">
-        <h4>{error ? "" : vehicle ? vehicle.name : "loading name.."}</h4>
+        <h4>{error ? "" : planet ? planet.name : "loading name.."}</h4>
         <p>
           {error
             ? "Error fetching data."
-            : vehicle
-            ? vehicle.model
+            : planet
+            ? planet.climate
             : "loading climate.."}
         </p>
       </div>
@@ -37,4 +35,4 @@ const VehicleItem = ({ url, path }) => {
   );
 };
 
-export default VehicleItem;
+export default PlanetItem;

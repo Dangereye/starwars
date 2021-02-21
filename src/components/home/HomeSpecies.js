@@ -2,7 +2,7 @@ import React from "react";
 import wookie from "../../images/wookie.jpg";
 import twilek from "../../images/twilek.jpg";
 import yodas from "../../images/yodas.jpg";
-import Button from "../Button";
+import Button from "../shared/Button";
 
 const Species = () => {
   return (

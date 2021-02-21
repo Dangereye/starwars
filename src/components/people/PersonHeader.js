@@ -5,8 +5,8 @@ import { GiTank } from "react-icons/gi";
 import { IoMdFemale, IoMdMale } from "react-icons/io";
 import { RiGenderlessLine } from "react-icons/ri";
 import { GiRobotGolem } from "react-icons/gi";
-import PersonSpecies from "../PersonSpecies";
-import PersonHomeWorld from "../PersonHomeWorld";
+import PersonSpecies from "./PersonSpecies";
+import PersonHomeWorld from "./PersonHomeWorld";
 const PersonHeader = ({
   homeWorld,
   name,

@@ -1,5 +1,5 @@
 import React from "react";
-import useFetch from "../hooks/useFetch";
+import useFetch from "../../hooks/useFetch";
 import { IoMdFemale, IoMdMale } from "react-icons/io";
 import { GiRobotGolem } from "react-icons/gi";
 import { RiGenderlessLine } from "react-icons/ri";

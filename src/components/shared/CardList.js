@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import background from "../images/movies.bg.jpg";
+import background from "../../images/movies.bg.jpg";
 import Loader from "./Loader";
 import Message from "./Message";
-import useFetch from "../hooks/useFetch";
-import PersonCard from "./PersonCard";
+import useFetch from "../../hooks/useFetch";
+import PersonCard from "../people/PersonCard";
 import { useLocation } from "react-router-dom";
-import MovieCard from "./movies/MovieCard";
+import MovieCard from "../movies/MovieCard";
 
 const CardList = ({ title, defaultURL }) => {
   const { pathname } = useLocation();

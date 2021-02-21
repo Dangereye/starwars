@@ -3,8 +3,8 @@ import { IoMdArrowRoundForward } from "react-icons/io";
 import { IoMdFemale, IoMdMale } from "react-icons/io";
 import { GiRobotGolem } from "react-icons/gi";
 import { RiGenderlessLine } from "react-icons/ri";
-import Button from "./Button";
-import PersonSpecies from "../components/PersonSpecies";
+import Button from "../shared/Button";
+import PersonSpecies from "./PersonSpecies";
 
 const PersonCard = ({ person }) => {
   const id = person.url.match(/\d{1,2}/g);

@@ -3,7 +3,7 @@ import { HomePageSectionsData as data } from "../data/HomePageSectionsData";
 import HomePlanets from "../components/home/HomePlanets";
 import HomeSection from "../components/home/HomeSection";
 import HomeSpecies from "../components/home/HomeSpecies";
-import CardList from "../components/CardList";
+import CardList from "../components/shared/CardList";
 
 const HomePage = () => {
   const { characters, vehicles, starships } = data;
