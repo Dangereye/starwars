@@ -22,18 +22,18 @@
   .icon {
     width: 100%;
     height: 40rem;
+    padding: 4rem;
     position: relative;
     top: -4rem;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #000;
+    box-shadow: $boxShadow;
     svg {
       width: 100%;
       height: 100%;
-      path {
-        fill: #fff;
-      }
+      fill: #fff;
     }
     &.male {
       background-color: #6eb9fa;
@@ -57,6 +57,30 @@
         fill: #000;
       }
     }
+    &.species {
+      background-color: #d4fab4;
+      svg {
+        fill: #000;
+      }
+    }
+    &.planet {
+      background-color: #ad7b2a;
+      svg {
+        fill: #fff;
+      }
+    }
+    &.starship {
+      background-color: #fa5c59;
+      svg {
+        fill: #fff;
+      }
+    }
+    &.vehicle {
+      background-color: #6e76fa;
+      svg {
+        fill: #fff;
+      }
+    }
   }
 
   .info {
@@ -66,9 +90,8 @@
       color: $textDarkest;
       margin-bottom: 1rem;
     }
-    .year {
-      display: inline-block;
-      margin-bottom: 3rem;
+    a {
+      margin-top: 3rem;
     }
   }
 }

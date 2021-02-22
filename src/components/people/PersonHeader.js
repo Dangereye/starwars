@@ -23,7 +23,7 @@ const PersonHeader = ({
   vehicles,
 }) => {
   return (
-    <header id="person-header">
+    <header>
       <div className="container">
         <div className={`icon ${gender}`}>
           {gender === "male" ? (
@@ -53,7 +53,7 @@ const PersonHeader = ({
               <span>{vehicles}</span>
             </div>
           </div>
-          <h4>Apperance</h4>
+          <h4>Appearance</h4>
           <p>
             Height: {height}
             {height !== "unknown" ? "cm" : ""}

@@ -31,7 +31,8 @@ p {
   max-width: 70ch;
   color: lighten($textDark, 30%);
 }
-h2 + p {
+h2 + p,
+p + h4 {
   margin-top: 2rem;
 }
 

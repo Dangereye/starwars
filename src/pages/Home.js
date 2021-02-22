@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { HomePageSectionsData as data } from "../data/HomePageSectionsData";
 import PlanetsSection from "../components/home/PlanetsSection";
 import GenericSection from "../components/home/GenericSection";
@@ -10,8 +10,9 @@ import Message from "../components/shared/Message";
 
 const HomePage = () => {
   const { characters, vehicles, starships } = data;
-  const [url, setUrl] = useState("https://swapi.dev/api/films");
-  const { isLoading, error, data: movies } = useFetch(url);
+  const { isLoading, error, data: movies } = useFetch(
+    "https://swapi.dev/api/films"
+  );
   if (isLoading) {
     return <Loader text="A long time ago in a galaxy far, far away.." />;
   }

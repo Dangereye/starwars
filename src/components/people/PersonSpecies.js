@@ -7,9 +7,7 @@ const PersonSpecies = ({ url }) => {
     <h4>
       {isLoading && "Loading.."}
       {error && ""}
-      {species
-        ? `${species.name} / ${species.classification}`
-        : "Human / mammal"}
+      {species ? `${species.name}` : "Human"}
     </h4>
   );
 };

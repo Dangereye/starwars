@@ -5,14 +5,14 @@ const PersonHomeWorld = ({ url }) => {
   const { isLoading, error, data: homeworld } = useFetch(url);
   return (
     <div className="homeworld">
-      <h4>Home world</h4>
+      <h4>Homeworld</h4>
       <p>
         {isLoading
           ? "Loading.."
           : homeworld
-          ? `${homeworld.name} -  ${homeworld.climate}`
+          ? `${homeworld.name}`
           : error
-          ? "Failed to fetch data"
+          ? "n/a"
           : "Unknown"}
       </p>
     </div>

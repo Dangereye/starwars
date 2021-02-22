@@ -24,7 +24,7 @@ const PersonCard = ({ person }) => {
       <div className="info">
         <PersonSpecies url={person.species} />
         <h3>{person.name}</h3>
-        <span className="year">{person.birth_year}</span>
+        <span>{person.birth_year}</span>
         <Button
           iconEnd={<IoMdArrowRoundForward />}
           path={`/person/${id}`}

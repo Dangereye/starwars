@@ -18,7 +18,7 @@ const MovieHeader = ({
   producer,
 }) => {
   return (
-    <header id="movie-header">
+    <header>
       <div className="container">
         <div className="image">
           <img src={MovieCovers[id - 1]} alt={title} />

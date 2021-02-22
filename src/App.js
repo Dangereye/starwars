@@ -4,10 +4,12 @@ import Navbar from "./components/layout/Navbar";
 import MobileMenu from "./components/layout/MobileMenu";
 import Footer from "./components/layout/Footer";
 import Home from "./pages/Home";
-import Movies from "./pages/Movie";
+import Movie from "./pages/Movie";
 import People from "./pages/People";
 import Planets from "./pages/Planets";
+import Planet from "./pages/Planet";
 import Species from "./pages/Species";
+import SpeciesOne from "./pages/SpeciesOne";
 import Starships from "./pages/Starships";
 import Vehicles from "./pages/Vehicles";
 import Person from "./pages/Person";
@@ -26,17 +28,17 @@ const App = () => {
       <main>
         <Switch>
           <Route path="/" exact component={Home} />
-          <Route path="/movie/:id" component={Movies} />
-          <Route path="/people" component={People} />
-          <Route path="/person/:id" component={Person} />
-          <Route path="/planets" component={Planets} />
-          <Route path="/planet/:id" component={Planets} />
-          <Route path="/species" component={Species} />
-          <Route path="/species/:id" component={Species} />
-          <Route path="/starships" component={Starships} />
-          <Route path="/starship/:id" component={Starships} />
-          <Route path="/vehicles" component={Vehicles} />
-          <Route path="/vehicle/:id" component={Vehicles} />
+          <Route path="/movie/:id" exact component={Movie} />
+          <Route path="/people" exact component={People} />
+          <Route path="/person/:id" exact component={Person} />
+          <Route path="/planets" exact component={Planets} />
+          <Route path="/planet/:id" exact component={Planet} />
+          <Route path="/species" exact component={Species} />
+          <Route path="/species/:id" exact component={SpeciesOne} />
+          <Route path="/starships" exact component={Starships} />
+          <Route path="/starship/:id" exact component={Starships} />
+          <Route path="/vehicles" exact component={Vehicles} />
+          <Route path="/vehicle/:id" exact component={Vehicles} />
         </Switch>
       </main>
 

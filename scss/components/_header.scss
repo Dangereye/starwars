@@ -1,9 +1,16 @@
-#person-header {
+header {
   padding: 4rem $paddingX;
   .container {
     display: flex;
+    .image {
+      flex: 1 1 30%;
+      img {
+        width: 100%;
+      }
+    }
     .icon {
       flex: 1 1 50%;
+      padding: 4rem;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -16,19 +23,47 @@
       &.male {
         background-color: #6eb9fa;
         svg {
-          fill: #fff;
+          path {
+            fill: #fff;
+          }
         }
       }
       &.female {
         background-color: #faa7b5;
         svg {
-          fill: #fff;
+          path {
+            fill: #fff;
+          }
         }
       }
       &.hermaphrodite {
         background-color: #faf3c0;
         svg {
           fill: #000;
+        }
+      }
+      &.species {
+        background-color: #d4fab4;
+        svg {
+          fill: #000;
+        }
+      }
+      &.planet {
+        background-color: #ad7b2a;
+        svg {
+          fill: #fff;
+        }
+      }
+      &.starship {
+        background-color: #fa5c59;
+        svg {
+          fill: #fff;
+        }
+      }
+      &.vehicle {
+        background-color: #6e76fa;
+        svg {
+          fill: #fff;
         }
       }
     }
