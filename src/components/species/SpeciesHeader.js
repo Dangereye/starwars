@@ -2,7 +2,9 @@ import React from "react";
 import { MdLocalMovies } from "react-icons/md";
 import { AiFillBug } from "react-icons/ai";
 import { IoPeopleSharp } from "react-icons/io5";
-import PersonHomeWorld from "../people/PersonHomeWorld";
+import HomeWorld from "../shared/HomeWorld";
+import DetailsGroup from "../shared/DetailsGroup";
+import CommaSeparatedNumber from "../shared/CommaSeparatedNumber";
 const PlanetHeader = ({
   movies,
   people,
@@ -20,7 +22,7 @@ const PlanetHeader = ({
   return (
     <header>
       <div className="container">
-        <div className="icon species">
+        <div className="icon icon-large species">
           <AiFillBug />
         </div>
         <div className="text">
@@ -36,29 +38,27 @@ const PlanetHeader = ({
             </div>
           </div>
           <h4>Categories</h4>
-          <p>Classification: {classification}</p>
-          <p>Designation: {designation}</p>
+          <div className="details">
+            <DetailsGroup name="Class" value={classification} />
+            <DetailsGroup name="Designation" value={designation} />
+          </div>
           <h4>Appearance</h4>
-          <p>Hair colors: {hairColors}</p>
-          <p>Skin colors: {skinColors}</p>
-          <p>Eye colors: {eyeColors}</p>
-          <p>
-            Average height: {avgHeight}
-            {avgHeight !== "n/a" ? "cm" : ""}
-          </p>
+          <div className="details">
+            <DetailsGroup name="Hair Colour(s)" value={hairColors} />
+            <DetailsGroup name="Skin Colour(s)" value={skinColors} />
+            <DetailsGroup name="Eye Colour(s)" value={eyeColors} />
+            <DetailsGroup
+              name="Avg height"
+              value={<CommaSeparatedNumber number={avgHeight} unit="cm" />}
+            />
+          </div>
           <h4>Average lifespan</h4>
-          <p>
-            {" "}
-            {avgLifespan}
-            {avgLifespan === "unknown"
-              ? ""
-              : avgLifespan === "indefinite"
-              ? ""
-              : " yrs"}
-          </p>
+          <span className="value">
+            <CommaSeparatedNumber number={avgLifespan} unit="yrs" />
+          </span>
           <h4>Language</h4>
-          <p>{language}</p>
-          <PersonHomeWorld url={homeWorld} />
+          <span className="value">{language}</span>
+          {homeWorld !== null && <HomeWorld url={homeWorld} />}
         </div>
       </div>
     </header>

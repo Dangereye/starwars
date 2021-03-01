@@ -10,7 +10,7 @@ const GridList = ({ title, list, path }) => {
   return (
     <section>
       <div className="container">
-        <h2>{title}</h2>
+        <h4>{title}</h4>
         <div className="grid-list">
           {path === "/person" &&
             list.map((person, index) => {

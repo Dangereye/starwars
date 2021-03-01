@@ -6,26 +6,18 @@ import Button from "../shared/Button";
 const PlanetCard = ({ planet }) => {
   const id = planet.url.match(/\d{1,2}/g);
   return (
-    <div className="card">
-      <div className="icon planet">
+    <div className="card small">
+      <div className="icon icon-medium planet">
         <IoPlanetSharp />
       </div>
-      <div className="info">
-        <h4>{planet.climate}</h4>
-        <h3>{planet.name}</h3>
-        <span>
-          {planet.diameter !== "unknown"
-            ? parseInt(planet.diameter).toLocaleString("en")
-            : "unknown"}
-          {planet.diameter !== "unknown" ? "km" : ""}
-        </span>
-        <Button
-          iconEnd={<IoMdArrowRoundForward />}
-          path={`/planet/${id}`}
-          css="btn-dark btn-medium"
-          text="Details"
-        />
-      </div>
+      <h3>{planet.name}</h3>
+      <span>{planet.climate}</span>
+      <Button
+        iconEnd={<IoMdArrowRoundForward />}
+        path={`/planet/${id}`}
+        css="btn-dark btn-medium"
+        text="Details"
+      />
     </div>
   );
 };

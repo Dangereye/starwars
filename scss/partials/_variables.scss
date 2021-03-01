@@ -1,4 +1,4 @@
-$fontSize: clamp(1.6rem, 2.5vw, 1.8rem);
+$fontSize: 1.6rem;
 
 $warning: rgb(255, 104, 117);
 $info: rgb(152, 186, 255);
@@ -6,8 +6,10 @@ $info: rgb(152, 186, 255);
 $textDark: rgb(27, 27, 27);
 $textDarkest: rgb(0, 0, 0);
 
-$textLight: rgb(204, 204, 204);
-$textLightest: rgb(255, 255, 255);
+$textLight: rgb(255, 255, 255);
+$textLight2: darken($textLight, 10%);
+$textLight3: darken($textLight, 20%);
+
 $linkColor: #028cdb;
 
 $paddingX: clamp(1.6rem, 3vw, 4rem);

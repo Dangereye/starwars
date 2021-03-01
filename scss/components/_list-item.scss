@@ -3,69 +3,6 @@
   cursor: pointer;
   transition: 0.4s;
 
-  .icon {
-    padding: 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #000;
-    svg {
-      width: 3rem;
-      height: 3rem;
-      fill: #fff;
-    }
-    &.male {
-      background-color: #6eb9fa;
-      svg {
-        path {
-          fill: #fff;
-        }
-      }
-    }
-    &.female {
-      background-color: #faa7b5;
-      svg {
-        path {
-          fill: #fff;
-        }
-      }
-    }
-    &.hermaphrodite {
-      background-color: #faf3c0;
-      svg {
-        fill: #000;
-      }
-    }
-    &.species {
-      background-color: #d4fab4;
-      svg {
-        fill: #000;
-      }
-    }
-    &.planet {
-      background-color: #ad7b2a;
-      svg {
-        fill: #fff;
-      }
-    }
-    &.starship {
-      background-color: #fa5c59;
-      svg {
-        fill: #fff;
-      }
-    }
-    &.vehicle {
-      background-color: #6e76fa;
-      svg {
-        fill: #fff;
-      }
-    }
-    &.spinner {
-      svg {
-        animation: spinner 1s linear infinite forwards;
-      }
-    }
-  }
   &.movie {
     flex-direction: column;
 

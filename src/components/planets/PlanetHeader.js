@@ -2,6 +2,8 @@ import React from "react";
 import { MdLocalMovies } from "react-icons/md";
 import { IoPlanetSharp } from "react-icons/io5";
 import { IoPeopleSharp } from "react-icons/io5";
+import DetailsGroup from "../shared/DetailsGroup";
+import CommaSeparatedNumber from "../shared/CommaSeparatedNumber";
 const PlanetHeader = ({
   climate,
   diameter,
@@ -18,7 +20,7 @@ const PlanetHeader = ({
   return (
     <header>
       <div className="container">
-        <div className="icon planet">
+        <div className="icon icon-large planet">
           <IoPlanetSharp />
         </div>
         <div className="text">
@@ -33,23 +35,38 @@ const PlanetHeader = ({
               <span>{people}</span>
             </div>
           </div>
-          <h4>Time</h4>
-          <p>Day: {rotationalPeriod} hrs</p>
-          <p>
-            Year: {orbitalPeriod} {orbitalPeriod !== "unknown" ? "days" : ""}
-          </p>
           <h4>Population</h4>
-          <p>
-            {population !== "unknown"
-              ? parseInt(population).toLocaleString("en")
-              : "unknown"}
-          </p>
+          <CommaSeparatedNumber number={population} />
+          <h4>Time</h4>
+          <div className="details">
+            <DetailsGroup
+              name="Day"
+              value={
+                <CommaSeparatedNumber number={rotationalPeriod} unit="hrs" />
+              }
+            />
+            <DetailsGroup
+              name="Year"
+              value={
+                <CommaSeparatedNumber number={orbitalPeriod} unit=" days" />
+              }
+            />
+          </div>
           <h4>Attributes</h4>
-          <p>Diameter: {parseInt(diameter).toLocaleString("en")}km</p>
-          <p>Gravity: {gravity}</p>
-          <p>Climate: {climate}</p>
-          <p>Terrain: {terrain}</p>
-          <p>Surface water: {surfaceWater}%</p>
+          <div className="details">
+            <DetailsGroup
+              name="Diameter"
+              value={<CommaSeparatedNumber number={diameter} unit="km" />}
+            />
+            <DetailsGroup name="Gravity" value={gravity} />
+            <DetailsGroup name="Climate" value={climate} />
+            <DetailsGroup name="Terrain" value={terrain} />
+            <DetailsGroup
+              name="Surface water"
+              value={surfaceWater}
+              conditional={surfaceWater !== "unknown" && "%"}
+            />
+          </div>
         </div>
       </div>
     </header>

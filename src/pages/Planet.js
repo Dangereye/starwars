@@ -22,7 +22,6 @@ const Planet = () => {
   if (planet) {
     return (
       <>
-        {console.log("Planet: ", planet)}
         <PreviousPage />
         <PlanetHeader
           climate={planet.climate}
@@ -37,7 +36,9 @@ const Planet = () => {
           surfaceWater={planet.surface_water}
           terrain={planet.terrain}
         />
-        <GridList title="Movies" list={planet.films} path="/movie" />
+        {planet.films.length > 0 && (
+          <GridList title="Movies" list={planet.films} path="/movie" />
+        )}
         {planet.residents.length > 0 && (
           <GridList title="Residents" list={planet.residents} path="/person" />
         )}

@@ -20,7 +20,7 @@ const Starships = () => {
 
   return (
     <>
-      <CardList title="Starships" list={starships.results} />
+      <CardList title="Starships" list={starships.results} size="small" />
       <Pagination count={starships.count} page={page} setPage={setPage} />
     </>
   );

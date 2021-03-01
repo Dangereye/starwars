@@ -8,7 +8,7 @@ import SpeciesCard from "../species/SpeciesCard";
 import StarshipCard from "../starships/StarshipCard";
 import VehicleCard from "../vehicles/VehicleCard";
 
-const CardList = ({ title, list }) => {
+const CardList = ({ title, list, size }) => {
   const { pathname } = useLocation();
 
   return (
@@ -20,7 +20,7 @@ const CardList = ({ title, list }) => {
       <div className="container">
         <h4>Explore</h4>
         <h2 className="section-title">{title}</h2>
-        <div className="items">
+        <div className={`items ${size}`}>
           {pathname === "/" &&
             list.map((movie, index) => {
               return <MovieCard movie={movie} key={index} id={index + 1} />;

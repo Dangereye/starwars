@@ -13,13 +13,13 @@
     height: 6rem;
     border-radius: 50%;
     border: 5px solid transparent;
-    border-color: $textLightest transparent;
+    border-color: $textLight transparent;
     margin-bottom: 4rem;
     animation: rotate 1.5s linear infinite;
   }
 
   .text {
-    color: $textLightest;
+    color: $textLight;
   }
 }
 

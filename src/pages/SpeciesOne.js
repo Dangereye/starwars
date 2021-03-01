@@ -7,7 +7,7 @@ import PreviousPage from "../components/shared/PreviousPage";
 import GridList from "../components/shared/GridList";
 import useFetch from "../hooks/useFetch";
 
-const Planet = () => {
+const SpeciesOne = () => {
   const { id } = useParams();
   const { isLoading, error, data: species } = useFetch(
     `https://swapi.dev/api/species/${id}`
@@ -22,7 +22,6 @@ const Planet = () => {
   if (species) {
     return (
       <>
-        {console.log("Species: ", species)}
         <PreviousPage />
         <SpeciesHeader
           movies={species.films.length}
@@ -45,4 +44,4 @@ const Planet = () => {
   }
 };
 
-export default Planet;
+export default SpeciesOne;

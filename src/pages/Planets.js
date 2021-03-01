@@ -20,7 +20,7 @@ const Planets = () => {
 
   return (
     <>
-      <CardList title="Planets" list={planets.results} />
+      <CardList title="Planets" list={planets.results} size="small" />
       <Pagination count={planets.count} page={page} setPage={setPage} />
     </>
   );

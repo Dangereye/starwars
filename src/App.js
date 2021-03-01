@@ -6,13 +6,15 @@ import Footer from "./components/layout/Footer";
 import Home from "./pages/Home";
 import Movie from "./pages/Movie";
 import People from "./pages/People";
+import Person from "./pages/Person";
 import Planets from "./pages/Planets";
 import Planet from "./pages/Planet";
 import Species from "./pages/Species";
 import SpeciesOne from "./pages/SpeciesOne";
 import Starships from "./pages/Starships";
+import Starship from "./pages/Starship";
 import Vehicles from "./pages/Vehicles";
-import Person from "./pages/Person";
+import Vehicle from "./pages/Vehicle";
 
 const App = () => {
   const [MenuIsOpen, setMenuIsOpen] = useState(false);
@@ -36,9 +38,9 @@ const App = () => {
           <Route path="/species" exact component={Species} />
           <Route path="/species/:id" exact component={SpeciesOne} />
           <Route path="/starships" exact component={Starships} />
-          <Route path="/starship/:id" exact component={Starships} />
+          <Route path="/starship/:id" exact component={Starship} />
           <Route path="/vehicles" exact component={Vehicles} />
-          <Route path="/vehicle/:id" exact component={Vehicles} />
+          <Route path="/vehicle/:id" exact component={Vehicle} />
         </Switch>
       </main>
 

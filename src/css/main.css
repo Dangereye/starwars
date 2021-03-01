@@ -1,8 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 html {
-  font-family: "Nanum Gothic", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 62.5%;
   font-weight: 400;
+  letter-spacing: 0.5px;
   line-height: 1.618;
 }
 
@@ -13,21 +14,46 @@ h4,
 h5,
 h6 {
   font-weight: 800;
-  line-height: 1;
+  line-height: 1.4;
 }
 
 h2 {
-  font-size: clamp(2.4rem, 6vw, 3.2rem);
+  font-size: 2.4rem;
   line-height: 1.618;
 }
 
 h3 {
-  font-size: clamp(1.8rem, 2.5vw, 2.4rem);
+  font-size: 2rem;
+}
+
+h4 + h3,
+h3 + span,
+h3 + a.value {
+  margin-top: 1rem;
+}
+
+h4 {
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+  font-weight: 400;
+  font-style: italic;
+}
+
+a + h4,
+span + h4,
+.details + h4 {
+  margin-top: 2rem;
+}
+
+h4 + a,
+h4 + span,
+h4 + p,
+h4 + h1 {
+  margin-top: 1rem;
 }
 
 p {
   max-width: 70ch;
-  color: #686868;
 }
 
 h2 + p,
@@ -50,7 +76,7 @@ button,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: clamp(1.6rem, 2.5vw, 1.8rem);
+  font-size: 1.6rem;
   border: none;
   cursor: pointer;
   -webkit-transition: 0.4s;
@@ -70,8 +96,17 @@ button.btn-back,
 
 button.btn-dark,
 .btn.btn-dark {
-  color: #fff;
   background-color: #000;
+}
+
+button.btn-dark span,
+.btn.btn-dark span {
+  color: white;
+}
+
+button.btn-dark svg,
+.btn.btn-dark svg {
+  fill: white;
 }
 
 button.btn-light,
@@ -107,9 +142,132 @@ button.btn-small,
   padding: 5px 10px;
 }
 
+a.value {
+  text-decoration: underline;
+}
+
 p + button,
-p + .btn {
+p + .btn,
+h3 + .btn,
+h3 + button,
+span + .btn,
+span + button,
+a.value + .btn,
+a.value + button {
   margin-top: 3rem;
+}
+
+.icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(255, 255, 37, 0.9);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.icon.icon-small {
+  padding: 1rem;
+}
+
+.icon.icon-small svg {
+  width: 3rem;
+  height: 3rem;
+}
+
+.icon.icon-medium {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 2rem;
+}
+
+.icon.icon-medium svg {
+  width: 6rem;
+  height: 6rem;
+}
+
+.icon.icon-large {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 30%;
+          flex: 1 1 30%;
+  padding: 4rem;
+}
+
+.icon.icon-large svg {
+  width: 100%;
+  height: 100%;
+}
+
+.icon svg {
+  fill: #000;
+}
+
+.icon.male {
+  background-color: #6eb9fa;
+}
+
+.icon.male svg path {
+  fill: #fff;
+}
+
+.icon.female {
+  background-color: #faa7b5;
+}
+
+.icon.female svg path {
+  fill: #fff;
+}
+
+.icon.hermaphrodite {
+  background-color: #faf3c0;
+}
+
+.icon.hermaphrodite svg {
+  fill: #000;
+}
+
+.icon.species {
+  background-color: #d4fab4;
+}
+
+.icon.species svg {
+  fill: #000;
+}
+
+.icon.planet {
+  background-color: #ad7b2a;
+}
+
+.icon.planet svg {
+  fill: #fff;
+}
+
+.icon.starship {
+  background-color: #fa5c59;
+}
+
+.icon.starship svg {
+  fill: #fff;
+}
+
+.icon.vehicle {
+  background-color: #6e76fa;
+}
+
+.icon.vehicle svg {
+  fill: #fff;
+}
+
+.icon.spinner svg {
+  -webkit-animation: spinner 1s linear infinite forwards;
+          animation: spinner 1s linear infinite forwards;
 }
 
 *,
@@ -131,7 +289,7 @@ a {
 }
 
 body {
-  font-size: clamp(1.6rem, 2.5vw, 1.8rem);
+  font-size: 1.6rem;
   color: #1b1b1b;
 }
 
@@ -156,13 +314,19 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0 clamp(1.6rem, 3vw, 4rem);
+  padding: 2rem clamp(1.6rem, 3vw, 4rem);
 }
 
 .container {
   margin: 0 auto;
   width: 100%;
   max-width: 1400px;
+}
+
+a.value,
+span.value {
+  color: white;
+  text-transform: capitalize;
 }
 
 #navbar {
@@ -173,7 +337,7 @@ section {
   z-index: 1000;
   padding: 0 clamp(1.6rem, 3vw, 4rem);
   background-color: #000;
-  color: #cccccc;
+  color: white;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
@@ -212,7 +376,7 @@ section {
 
 #navbar .container .desktop-menu li a {
   cursor: pointer;
-  color: #cccccc;
+  color: #e6e6e6;
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
@@ -304,7 +468,7 @@ section {
           align-items: center;
   cursor: pointer;
   font-size: 2.4rem;
-  color: #cccccc;
+  color: #e6e6e6;
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
@@ -704,9 +868,20 @@ section.homepage-section .container .text {
   margin-top: 4rem;
   display: -ms-grid;
   display: grid;
+}
+
+.card-list .container .items.large {
   -ms-grid-columns: (minmax(31rem, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(31rem, 1fr));
   gap: 8rem;
+}
+
+.card-list .container .items.small {
+  -ms-grid-columns: (minmax(22rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+  -webkit-column-gap: 4rem;
+          column-gap: 4rem;
+  row-gap: 8rem;
 }
 
 @media (max-width: 666px) {
@@ -734,16 +909,23 @@ section.homepage-section .container .text {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 0 4rem 4rem 4rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border: 1px solid rgba(255, 255, 255, 0.2);
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.6));
   -webkit-backdrop-filter: blur(6px);
           backdrop-filter: blur(6px);
   -webkit-box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
           box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+}
+
+.card.large {
+  padding: 0 4rem 4rem 4rem;
+}
+
+.card.small {
+  padding: 0 2rem 4rem 2rem;
 }
 
 .card img {
@@ -756,96 +938,25 @@ section.homepage-section .container .text {
 }
 
 .card .icon {
-  width: 100%;
-  height: 40rem;
-  padding: 4rem;
   position: relative;
   top: -4rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: #000;
   -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1), 0 10px 15px rgba(0, 0, 0, 0.1), 0 20px 25px rgba(0, 0, 0, 0.1);
           box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1), 0 10px 15px rgba(0, 0, 0, 0.1), 0 20px 25px rgba(0, 0, 0, 0.1);
 }
 
-.card .icon svg {
-  width: 100%;
-  height: 100%;
-  fill: #fff;
+.card h4.episode {
+  color: #000;
+  font-weight: 500;
 }
 
-.card .icon.male {
-  background-color: #6eb9fa;
+.card h3 {
+  text-align: center;
+  color: #000;
 }
 
-.card .icon.male svg path {
-  fill: #fff;
-}
-
-.card .icon.female {
-  background-color: #faa7b5;
-}
-
-.card .icon.female svg path {
-  fill: #fff;
-}
-
-.card .icon.hermaphrodite {
-  background-color: #faf3c0;
-}
-
-.card .icon.hermaphrodite svg {
-  fill: #000;
-}
-
-.card .icon.species {
-  background-color: #d4fab4;
-}
-
-.card .icon.species svg {
-  fill: #000;
-}
-
-.card .icon.planet {
-  background-color: #ad7b2a;
-}
-
-.card .icon.planet svg {
-  fill: #fff;
-}
-
-.card .icon.starship {
-  background-color: #fa5c59;
-}
-
-.card .icon.starship svg {
-  fill: #fff;
-}
-
-.card .icon.vehicle {
-  background-color: #6e76fa;
-}
-
-.card .icon.vehicle svg {
-  fill: #fff;
-}
-
-.card .info h4,
-.card .info h3 {
-  text-align: left;
-  color: black;
-  margin-bottom: 1rem;
-}
-
-.card .info a {
-  margin-top: 3rem;
+.card span {
+  text-align: center;
+  text-transform: capitalize;
 }
 
 .pagination {
@@ -891,13 +1002,18 @@ section.homepage-section .container .text {
 }
 
 header {
+  position: relative;
   padding: 4rem clamp(1.6rem, 3vw, 4rem);
+  background-position: center;
+  background-size: cover;
 }
 
 header .container {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  z-index: 3;
 }
 
 header .container .image {
@@ -908,85 +1024,7 @@ header .container .image {
 
 header .container .image img {
   width: 100%;
-}
-
-header .container .icon {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 50%;
-          flex: 1 1 50%;
-  padding: 4rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: #1b1b1b;
-}
-
-header .container .icon svg {
-  width: 100%;
-  height: 100%;
-  fill: #fff;
-}
-
-header .container .icon.male {
-  background-color: #6eb9fa;
-}
-
-header .container .icon.male svg path {
-  fill: #fff;
-}
-
-header .container .icon.female {
-  background-color: #faa7b5;
-}
-
-header .container .icon.female svg path {
-  fill: #fff;
-}
-
-header .container .icon.hermaphrodite {
-  background-color: #faf3c0;
-}
-
-header .container .icon.hermaphrodite svg {
-  fill: #000;
-}
-
-header .container .icon.species {
-  background-color: #d4fab4;
-}
-
-header .container .icon.species svg {
-  fill: #000;
-}
-
-header .container .icon.planet {
-  background-color: #ad7b2a;
-}
-
-header .container .icon.planet svg {
-  fill: #fff;
-}
-
-header .container .icon.starship {
-  background-color: #fa5c59;
-}
-
-header .container .icon.starship svg {
-  fill: #fff;
-}
-
-header .container .icon.vehicle {
-  background-color: #6e76fa;
-}
-
-header .container .icon.vehicle svg {
-  fill: #fff;
+  min-height: 34rem;
 }
 
 header .container .text {
@@ -1007,15 +1045,52 @@ header .container .text {
 }
 
 header .container .text h4 {
-  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  color: #cccccc;
 }
 
-header .container .text .homeworld {
-  margin: 2rem 0;
+header .container .text h1 {
+  color: white;
+}
+
+header .container .text p {
+  color: #e6e6e6;
+}
+
+header .container .text .details {
+  padding: 1rem 0;
+}
+
+header .container .text .details > .details-group:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+
+header .container .text .details .details-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+header .container .text .details .details-group a.value,
+header .container .text .details .details-group span.value {
+  text-align: right;
+}
+
+header .container .text span {
+  font-weight: 400;
+}
+
+header .container .text span.key {
+  margin-right: 4rem;
+  color: #e6e6e6;
 }
 
 header .container .text .stats {
-  margin: 1rem 0 2rem 0;
+  margin: 1rem 0 1rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1024,14 +1099,20 @@ header .container .text .stats {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 1.5rem;
-  color: #555555;
+  font-size: 1.4rem;
+  color: #e6e6e6;
+}
+
+header .container .text .stats svg {
+  fill: #cccccc;
 }
 
 header .container .text .stats > div:not(:last-child)::after {
   margin: 0 1rem;
   font-size: 2rem;
+  font-weight: 100;
   content: "|";
+  color: #cccccc;
 }
 
 header .container .text .stats div {
@@ -1059,6 +1140,17 @@ header .container .text .stats div span {
   }
 }
 
+header::after {
+  content: "";
+  display: block;
+  background-color: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .grid-list {
   padding: 2rem 0;
   display: -ms-grid;
@@ -1075,87 +1167,6 @@ header .container .text .stats div span {
   cursor: pointer;
   -webkit-transition: 0.4s;
   transition: 0.4s;
-}
-
-.list-item .icon {
-  padding: 1rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: #000;
-}
-
-.list-item .icon svg {
-  width: 3rem;
-  height: 3rem;
-  fill: #fff;
-}
-
-.list-item .icon.male {
-  background-color: #6eb9fa;
-}
-
-.list-item .icon.male svg path {
-  fill: #fff;
-}
-
-.list-item .icon.female {
-  background-color: #faa7b5;
-}
-
-.list-item .icon.female svg path {
-  fill: #fff;
-}
-
-.list-item .icon.hermaphrodite {
-  background-color: #faf3c0;
-}
-
-.list-item .icon.hermaphrodite svg {
-  fill: #000;
-}
-
-.list-item .icon.species {
-  background-color: #d4fab4;
-}
-
-.list-item .icon.species svg {
-  fill: #000;
-}
-
-.list-item .icon.planet {
-  background-color: #ad7b2a;
-}
-
-.list-item .icon.planet svg {
-  fill: #fff;
-}
-
-.list-item .icon.starship {
-  background-color: #fa5c59;
-}
-
-.list-item .icon.starship svg {
-  fill: #fff;
-}
-
-.list-item .icon.vehicle {
-  background-color: #6e76fa;
-}
-
-.list-item .icon.vehicle svg {
-  fill: #fff;
-}
-
-.list-item .icon.spinner svg {
-  -webkit-animation: spinner 1s linear infinite forwards;
-          animation: spinner 1s linear infinite forwards;
 }
 
 .list-item.movie {
@@ -1231,7 +1242,7 @@ header .container .text .stats div span {
 footer {
   padding: 1rem clamp(1.6rem, 3vw, 4rem);
   background-color: #000;
-  color: #cccccc;
+  color: white;
 }
 
 footer .container {

@@ -20,7 +20,7 @@ const People = () => {
 
   return (
     <>
-      <CardList title="Characters" list={people.results} />
+      <CardList title="Characters" list={people.results} size="small" />
       <Pagination count={people.count} page={page} setPage={setPage} />
     </>
   );

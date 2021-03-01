@@ -20,7 +20,7 @@
       align-items: center;
       cursor: pointer;
       font-size: 2.4rem;
-      color: $textLight;
+      color: $textLight2;
       transition: 0.4s;
 
       span {
@@ -28,7 +28,7 @@
       }
 
       &:hover {
-        color: $textLightest;
+        color: $textLight;
       }
     }
   }

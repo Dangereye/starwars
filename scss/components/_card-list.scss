@@ -19,8 +19,16 @@
     .items {
       margin-top: 4rem;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(31rem, 1fr));
-      gap: 8rem;
+
+      &.large {
+        grid-template-columns: repeat(auto-fit, minmax(31rem, 1fr));
+        gap: 8rem;
+      }
+      &.small {
+        grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+        column-gap: 4rem;
+        row-gap: 8rem;
+      }
     }
   }
 

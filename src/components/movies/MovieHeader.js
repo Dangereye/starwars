@@ -50,16 +50,10 @@ const MovieHeader = ({
           </div>
           <h4>Opening crawl</h4>
           <p>{crawl}</p>
-          <div className="production">
-            <div className="production-group">
-              <h4>Director</h4>
-              <p>{director}</p>
-            </div>
-            <div className="production-group">
-              <h4>Producer(s)</h4>
-              <p>{producer}</p>
-            </div>
-          </div>
+          <h4>Director</h4>
+          <p>{director}</p>
+          <h4>Producer(s)</h4>
+          <p>{producer}</p>
         </div>
       </div>
     </header>

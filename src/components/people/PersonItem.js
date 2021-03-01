@@ -1,11 +1,9 @@
 import React from "react";
 import useFetch from "../../hooks/useFetch";
-import { IoMdFemale, IoMdMale } from "react-icons/io";
-import { GiRobotGolem } from "react-icons/gi";
-import { RiGenderlessLine } from "react-icons/ri";
 import { ImSpinner9 } from "react-icons/im";
 import { MdErrorOutline } from "react-icons/md";
 import { Link } from "react-router-dom";
+import GenderIcon from "../shared/GenderIcon";
 
 const PersonItem = ({ url, path }) => {
   const { isLoading, error, data: person } = useFetch(url);
@@ -14,37 +12,16 @@ const PersonItem = ({ url, path }) => {
   return (
     <Link className="list-item" to={`${path}/${id}`}>
       <div
-        className={`icon ${
+        className={`icon icon-small ${
           isLoading ? "spinner" : person ? person.gender : ""
         }`}
       >
-        {isLoading ? (
-          <ImSpinner9 />
-        ) : error ? (
-          <MdErrorOutline />
-        ) : person ? (
-          person.gender === "male" ? (
-            <IoMdMale />
-          ) : person.gender === "female" ? (
-            <IoMdFemale />
-          ) : person.gender === "hermaphrodite" ? (
-            <RiGenderlessLine />
-          ) : (
-            <GiRobotGolem />
-          )
-        ) : (
-          ""
-        )}
+        {isLoading && <ImSpinner9 />}
+        {error && <MdErrorOutline />}
+        {person && <GenderIcon gender={person.gender} size="icon-small" />}
       </div>
       <div className="info">
-        <h4>{error ? "" : person ? person.name : "loading name.."}</h4>
-        <p>
-          {error
-            ? "Error fetching data."
-            : person
-            ? person.birth_year
-            : "loading birth year.."}
-        </p>
+        <h5>{error ? "" : person ? person.name : "loading name.."}</h5>
       </div>
     </Link>
   );

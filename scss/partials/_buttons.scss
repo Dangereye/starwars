@@ -17,8 +17,13 @@ button,
   }
 
   &.btn-dark {
-    color: #fff;
     background-color: #000;
+    span {
+      color: $textLight;
+    }
+    svg {
+      fill: $textLight;
+    }
   }
 
   &.btn-light {
@@ -47,7 +52,17 @@ button,
   }
 }
 
+a.value {
+  text-decoration: underline;
+}
+
 p + button,
-p + .btn {
+p + .btn,
+h3 + .btn,
+h3 + button,
+span + .btn,
+span + button,
+a.value + .btn,
+a.value + button {
   margin-top: 3rem;
 }

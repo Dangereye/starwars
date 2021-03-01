@@ -1,99 +1,81 @@
 header {
+  position: relative;
   padding: 4rem $paddingX;
+  background-position: center;
+  background-size: cover;
+
   .container {
+    position: relative;
     display: flex;
+    z-index: 3;
+
     .image {
       flex: 1 1 30%;
       img {
         width: 100%;
+        min-height: 34rem;
       }
     }
-    .icon {
-      flex: 1 1 50%;
-      padding: 4rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: $textDark;
-      svg {
-        width: 100%;
-        height: 100%;
-        fill: #fff;
-      }
-      &.male {
-        background-color: #6eb9fa;
-        svg {
-          path {
-            fill: #fff;
-          }
-        }
-      }
-      &.female {
-        background-color: #faa7b5;
-        svg {
-          path {
-            fill: #fff;
-          }
-        }
-      }
-      &.hermaphrodite {
-        background-color: #faf3c0;
-        svg {
-          fill: #000;
-        }
-      }
-      &.species {
-        background-color: #d4fab4;
-        svg {
-          fill: #000;
-        }
-      }
-      &.planet {
-        background-color: #ad7b2a;
-        svg {
-          fill: #fff;
-        }
-      }
-      &.starship {
-        background-color: #fa5c59;
-        svg {
-          fill: #fff;
-        }
-      }
-      &.vehicle {
-        background-color: #6e76fa;
-        svg {
-          fill: #fff;
-        }
-      }
-    }
+
     .text {
       flex: 1 1 50%;
       padding-left: 4rem;
       display: flex;
       flex-direction: column;
       justify-content: center;
-
       h4 {
-        margin-bottom: 1rem;
+        font-size: 1.4rem;
+        color: $textLight3;
       }
-
-      .homeworld {
-        margin: 2rem 0;
+      h1 {
+        color: $textLight;
+      }
+      p {
+        color: $textLight2;
+      }
+      .details {
+        padding: 1rem 0;
+        > .details-group:not(:last-child) {
+          margin-bottom: 0.5rem;
+        }
+        .details-group {
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+          a.value,
+          span.value {
+            text-align: right;
+          }
+        }
+      }
+      span {
+        font-weight: 400;
+      }
+      span.key {
+        margin-right: 4rem;
+        color: $textLight2;
       }
 
       .stats {
-        margin: 1rem 0 2rem 0;
+        margin: 1rem 0 1rem 0;
         display: flex;
         flex-wrap: wrap;
         align-items: center;
-        font-size: 1.5rem;
-        color: rgb(85, 85, 85);
+        font-size: 1.4rem;
+        color: $textLight2;
+        svg {
+          fill: $textLight3;
+          path {
+          }
+        }
+
         > div:not(:last-child) {
           &::after {
             margin: 0 1rem;
             font-size: 2rem;
+            font-weight: 100;
             content: "|";
+            color: $textLight3;
           }
         }
         div {
@@ -111,5 +93,15 @@ header {
         padding: 4rem 0 0 0;
       }
     }
+  }
+  &::after {
+    content: "";
+    display: block;
+    background-color: rgba(#000, 1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
 }

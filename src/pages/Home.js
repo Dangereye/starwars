@@ -23,7 +23,7 @@ const HomePage = () => {
   if (movies) {
     return (
       <>
-        <CardList title="Movies" list={movies.results} />
+        <CardList title="Movies" list={movies.results} size="large" />
         <GenericSection
           src={characters.image.src}
           alt={characters.image.alt}

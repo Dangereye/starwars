@@ -2,11 +2,12 @@ import React from "react";
 import { MdLocalMovies } from "react-icons/md";
 import { RiSpaceShipFill } from "react-icons/ri";
 import { GiTank } from "react-icons/gi";
-import { IoMdFemale, IoMdMale } from "react-icons/io";
-import { RiGenderlessLine } from "react-icons/ri";
-import { GiRobotGolem } from "react-icons/gi";
-import PersonSpecies from "./PersonSpecies";
-import PersonHomeWorld from "./PersonHomeWorld";
+import PersonSpecies from "../shared/PersonSpecies";
+import HomeWorld from "../shared/HomeWorld";
+import BgImage from "../../images/people.jpg";
+import GenderIcon from "../shared/GenderIcon";
+import CommaSeparatedNumber from "../shared/CommaSeparatedNumber";
+import DetailsGroup from "../shared/DetailsGroup";
 const PersonHeader = ({
   homeWorld,
   name,
@@ -23,54 +24,47 @@ const PersonHeader = ({
   vehicles,
 }) => {
   return (
-    <header>
+    <header style={{ background: `url(${BgImage})` }}>
       <div className="container">
-        <div className={`icon ${gender}`}>
-          {gender === "male" ? (
-            <IoMdMale />
-          ) : gender === "female" ? (
-            <IoMdFemale />
-          ) : gender === "hermaphrodite" ? (
-            <RiGenderlessLine />
-          ) : (
-            <GiRobotGolem />
-          )}
-        </div>
+        <GenderIcon gender={gender} size="icon-large" />
         <div className="text">
-          <PersonSpecies url={species} />
           <h1>{name}</h1>
           <div className="stats">
             <div>
               <MdLocalMovies />
-              <span>{movies}</span>
+              <span className="value">{movies}</span>
             </div>
             <div>
               <RiSpaceShipFill />
-              <span>{starships}</span>
+              <span className="value">{starships}</span>
             </div>
             <div>
               <GiTank />
-              <span>{vehicles}</span>
+              <span className="value">{vehicles}</span>
             </div>
           </div>
+          <h4>Species</h4>
+          <PersonSpecies url={species[0]} link={true} />
           <h4>Appearance</h4>
-          <p>
-            Height: {height}
-            {height !== "unknown" ? "cm" : ""}
-          </p>
-          <p>
-            Weight: {mass}
-            {mass !== "unknown" ? "kg" : ""}
-          </p>
-          <p>Hair colour: {hairColor}</p>
-          <p>Eye colour: {eyeColor}</p>
-          <p>Skin colour: {skinColor}</p>
-          <PersonHomeWorld url={homeWorld} />
+          <div className="details">
+            <DetailsGroup
+              name="Height"
+              value={<CommaSeparatedNumber number={height} unit="cm" />}
+            />
+            <DetailsGroup
+              name="Weight"
+              value={<CommaSeparatedNumber number={mass} unit="kg" />}
+            />
+            <DetailsGroup name="Hair colour(s)" value={hairColor} />
+            <DetailsGroup name="Eye colour(s)" value={eyeColor} />
+            <DetailsGroup name="Skin colour(s)" value={skinColor} />
+          </div>
+          <HomeWorld url={homeWorld} />
           <h4>Birth year</h4>
-          <p>
+          <span className="value">
             {birthYear}{" "}
-            {birthYear !== "unknown" ? "(Before the battle of Yavin)" : ""}
-          </p>
+            {birthYear !== "unknown" && "(Years before the battle of Yavin)"}
+          </span>
         </div>
       </div>
     </header>

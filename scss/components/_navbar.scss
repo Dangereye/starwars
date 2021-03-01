@@ -34,11 +34,11 @@
 
       li a {
         cursor: pointer;
-        color: $textLight;
+        color: $textLight2;
         transition: 0.4s;
 
         &:hover {
-          color: $textLightest;
+          color: $textLight;
         }
       }
     }
@@ -58,7 +58,7 @@
       div {
         height: 3px;
         width: 2.7rem;
-        background-color: $textLightest;
+        background-color: $textLight;
         border-radius: 2px;
         transition: 0.4s;
       }

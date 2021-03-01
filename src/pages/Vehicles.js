@@ -20,7 +20,7 @@ const Vehicles = () => {
 
   return (
     <>
-      <CardList title="Vehicles" list={vehicles.results} />
+      <CardList title="Vehicles" list={vehicles.results} size="small" />
       <Pagination count={vehicles.count} page={page} setPage={setPage} />
     </>
   );

@@ -6,26 +6,18 @@ import Button from "../shared/Button";
 const StarshipCard = ({ starship }) => {
   const id = starship.url.match(/\d{1,2}/g);
   return (
-    <div className="card">
-      <div className="icon starship">
+    <div className="card small">
+      <div className="icon icon-medium starship">
         <RiSpaceShipFill />
       </div>
-      <div className="info">
-        <h4>{starship.model}</h4>
-        <h3>{starship.name}</h3>
-        <span>
-          {starship.cost_in_credits !== "unknown"
-            ? parseInt(starship.cost_in_credits).toLocaleString("en")
-            : "unknown"}
-          {starship.cost_in_credits !== "unknown" ? "gc" : ""}
-        </span>
-        <Button
-          iconEnd={<IoMdArrowRoundForward />}
-          path={`/planet/${id}`}
-          css="btn-dark btn-medium"
-          text="Details"
-        />
-      </div>
+      <h3>{starship.name}</h3>
+      <span>{starship.model}</span>
+      <Button
+        iconEnd={<IoMdArrowRoundForward />}
+        path={`/starship/${id}`}
+        css="btn-dark btn-medium"
+        text="Details"
+      />
     </div>
   );
 };

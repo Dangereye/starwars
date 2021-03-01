@@ -20,7 +20,7 @@ const Species = () => {
 
   return (
     <>
-      <CardList title="Species" list={species.results} />
+      <CardList title="Species" list={species.results} size="small" />
       <Pagination count={species.count} page={page} setPage={setPage} />
     </>
   );
