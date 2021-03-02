@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { HomePageSectionsData as data } from "../data/HomePageSectionsData";
 import PlanetsSection from "../components/home/PlanetsSection";
 import GenericSection from "../components/home/GenericSection";
@@ -13,6 +13,11 @@ const HomePage = () => {
   const { isLoading, error, data: movies } = useFetch(
     "https://swapi.dev/api/films"
   );
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
+
   if (isLoading) {
     return <Loader text="A long time ago in a galaxy far, far away.." />;
   }

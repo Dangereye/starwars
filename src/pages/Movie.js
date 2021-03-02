@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Loader from "../components/shared/Loader";
 import Message from "../components/shared/Message";
@@ -12,6 +12,11 @@ const Movie = () => {
   const { isLoading, error, data: movie } = useFetch(
     `https://swapi.dev/api/films/${id}`
   );
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
+
   if (isLoading) {
     return <Loader text="A long time ago in a galaxy far, far away.." />;
   }

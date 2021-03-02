@@ -1,5 +1,5 @@
 import React from "react";
-import { BsFillCaretLeftFill, BsFillCaretRightFill } from "react-icons/bs";
+import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 
 const Pagination = ({ count, page, setPage }) => {
   const pages = Math.ceil(count / 10);
@@ -8,7 +8,7 @@ const Pagination = ({ count, page, setPage }) => {
       <div className="container">
         {page > 1 && (
           <div onClick={() => setPage((page) => page - 1)}>
-            <BsFillCaretLeftFill />
+            <FiChevronLeft />
           </div>
         )}
         {page > 3 && <div onClick={() => setPage(1)}>1</div>}
@@ -26,7 +26,7 @@ const Pagination = ({ count, page, setPage }) => {
         )}
         {page < pages && (
           <div onClick={() => setPage((page) => page + 1)}>
-            <BsFillCaretRightFill />
+            <FiChevronRight />
           </div>
         )}
       </div>

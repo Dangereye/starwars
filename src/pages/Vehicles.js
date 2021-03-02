@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import CardList from "../components/shared/CardList";
 import Loader from "../components/shared/Loader";
 import Message from "../components/shared/Message";
@@ -10,6 +10,9 @@ const Vehicles = () => {
   const { isLoading, error, data: vehicles } = useFetch(
     `https://swapi.dev/api/vehicles/?page=${page}`
   );
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
   if (isLoading) {
     return <Loader text="A long time ago in a galaxy far, far away.." />;
   }
