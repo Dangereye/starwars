@@ -71,6 +71,8 @@ a {
 
 button,
 .btn {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -94,13 +96,14 @@ button > *:not(:last-child),
 
 button.btn-back,
 .btn.btn-back {
+  padding: 1rem 0;
   color: #1b1b1b;
   background-color: transparent;
 }
 
 button.btn-dark,
 .btn.btn-dark {
-  background-color: #000;
+  background-color: black;
 }
 
 button.btn-dark span,
@@ -115,13 +118,13 @@ button.btn-dark svg,
 
 button.btn-light,
 .btn.btn-light {
-  color: #000;
-  background-color: #fff;
+  color: black;
+  background-color: white;
 }
 
 button.btn-red,
 .btn.btn-red {
-  color: #fff;
+  color: white;
   background-color: #e11c1c;
 }
 
@@ -210,15 +213,15 @@ a.value + button {
 }
 
 .icon svg {
-  fill: #000;
+  fill: black;
 }
 
 .icon.spinner {
-  background-color: #000;
+  background-color: black;
 }
 
 .icon.spinner svg path {
-  fill: #fff;
+  fill: white;
 }
 
 .icon.error {
@@ -226,15 +229,15 @@ a.value + button {
 }
 
 .icon.error svg path {
-  fill: #fff;
+  fill: white;
 }
 
 .icon.movie {
-  background-color: #000;
+  background-color: black;
 }
 
 .icon.movie svg path {
-  fill: #fff;
+  fill: white;
 }
 
 .icon.male {
@@ -242,7 +245,7 @@ a.value + button {
 }
 
 .icon.male svg path {
-  fill: #fff;
+  fill: white;
 }
 
 .icon.female {
@@ -250,7 +253,7 @@ a.value + button {
 }
 
 .icon.female svg path {
-  fill: #fff;
+  fill: white;
 }
 
 .icon.hermaphrodite {
@@ -258,7 +261,7 @@ a.value + button {
 }
 
 .icon.hermaphrodite svg {
-  fill: #000;
+  fill: black;
 }
 
 .icon.species {
@@ -266,7 +269,7 @@ a.value + button {
 }
 
 .icon.species svg {
-  fill: #000;
+  fill: black;
 }
 
 .icon.planet {
@@ -274,7 +277,7 @@ a.value + button {
 }
 
 .icon.planet svg {
-  fill: #fff;
+  fill: white;
 }
 
 .icon.starship {
@@ -282,7 +285,7 @@ a.value + button {
 }
 
 .icon.starship svg {
-  fill: #fff;
+  fill: white;
 }
 
 .icon.vehicle {
@@ -290,7 +293,7 @@ a.value + button {
 }
 
 .icon.vehicle svg {
-  fill: #fff;
+  fill: white;
 }
 
 .icon.spinner svg {
@@ -349,6 +352,11 @@ section {
   margin: 0 auto;
   width: 100%;
   max-width: 1400px;
+}
+
+.previous-page {
+  padding: 0 clamp(1.6rem, 3vw, 4rem);
+  background-color: whitesmoke;
 }
 
 a.value,
@@ -531,7 +539,7 @@ span.value {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #000;
+  background-color: black;
 }
 
 .loader .spinner {
@@ -855,7 +863,7 @@ section.homepage-section .container .text {
 #planets .content h4,
 #planets .content h2,
 #planets .content p {
-  color: #fff;
+  color: white;
 }
 
 #planets::after {
@@ -866,7 +874,7 @@ section.homepage-section .container .text {
   display: block;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
   z-index: 1;
 }
 
@@ -884,7 +892,7 @@ section.homepage-section .container .text {
 
 .card-list .container h4,
 .card-list .container h2 {
-  color: #fff;
+  color: white;
   text-align: center;
 }
 
@@ -944,8 +952,8 @@ section.homepage-section .container .text {
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.6));
   -webkit-backdrop-filter: blur(6px);
           backdrop-filter: blur(6px);
-  -webkit-box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
-          box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1), 0 10px 15px rgba(0, 0, 0, 0.1), 0 20px 25px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1), 0 10px 15px rgba(0, 0, 0, 0.1), 0 20px 25px rgba(0, 0, 0, 0.1);
 }
 
 .card.large {
@@ -973,13 +981,13 @@ section.homepage-section .container .text {
 }
 
 .card h4.episode {
-  color: #000;
+  color: black;
   font-weight: 500;
 }
 
 .card h3 {
   text-align: center;
-  color: #000;
+  color: black;
 }
 
 .card span {
@@ -990,7 +998,7 @@ section.homepage-section .container .text {
 .pagination {
   color: #fff;
   padding: 2rem clamp(1.6rem, 3vw, 4rem);
-  background-color: #000;
+  background-color: black;
 }
 
 .pagination .container {
@@ -1003,7 +1011,7 @@ section.homepage-section .container .text {
 }
 
 .pagination .container > *:not(:last-child) {
-  margin-right: 1rem;
+  margin-right: 0.5rem;
 }
 
 .pagination .container span,
@@ -1028,20 +1036,20 @@ section.homepage-section .container .text {
 }
 
 .pagination .container div {
-  border: 1px solid #6b6b6b;
+  border: 1px solid rgba(255, 255, 255, 0.2);
   cursor: pointer;
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 
 .pagination .container div.active, .pagination .container div:hover {
-  border-color: #fff;
+  border-color: white;
 }
 
 header {
   position: relative;
   padding: 4rem clamp(1.6rem, 3vw, 4rem);
-  background-color: #000;
+  background-color: black;
 }
 
 header .container {
@@ -1209,7 +1217,7 @@ header .container .text .stats div span {
 }
 
 .list-item.movie .info {
-  background-color: #fff;
+  background-color: white;
 }
 
 .list-item .info {
@@ -1225,7 +1233,7 @@ header .container .text .stats div span {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #f5f4f4;
+  background-color: whitesmoke;
 }
 
 .list-item .info h5,
@@ -1263,7 +1271,7 @@ header .container .text .stats div span {
 
 footer {
   padding: 1rem clamp(1.6rem, 3vw, 4rem);
-  background-color: #000;
+  background-color: black;
   color: white;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
 }

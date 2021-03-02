@@ -43,7 +43,10 @@ section {
   width: 100%;
   max-width: 1400px;
 }
-
+.previous-page {
+  padding: 0 $paddingX;
+  background-color: $bgLight2;
+}
 a.value,
 span.value {
   color: $textLight;

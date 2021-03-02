@@ -1,12 +1,12 @@
 .pagination {
   color: #fff;
   padding: 2rem $paddingX;
-  background-color: #000;
+  background-color: $bgDarkest;
   .container {
     display: flex;
     justify-content: center;
     > *:not(:last-child) {
-      margin-right: 1rem;
+      margin-right: 0.5rem;
     }
     span,
     div {
@@ -19,13 +19,13 @@
       user-select: none;
     }
     div {
-      border: 1px solid rgb(107, 107, 107);
+      border: 1px solid $borderLight2;
       cursor: pointer;
       transition: 0.4s;
 
       &.active,
       &:hover {
-        border-color: #fff;
+        border-color: $borderLight;
       }
     }
   }

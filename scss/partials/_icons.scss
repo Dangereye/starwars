@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #ffff25;
+  background-color: $iconDefault;
   transition: 0.4s;
 
   &.icon-small {
@@ -31,14 +31,14 @@
     }
   }
   svg {
-    fill: #000;
+    fill: $textDarkest;
   }
 
   &.spinner {
-    background-color: #000;
+    background-color: $bgDarkest;
     svg {
       path {
-        fill: #fff;
+        fill: $textLight;
       }
     }
   }
@@ -46,62 +46,62 @@
     background-color: $warning;
     svg {
       path {
-        fill: #fff;
+        fill: $textLight;
       }
     }
   }
   &.movie {
-    background-color: #000;
+    background-color: $bgDarkest;
     svg {
       path {
-        fill: #fff;
+        fill: $textLight;
       }
     }
   }
   &.male {
-    background-color: #6eb9fa;
+    background-color: $iconMale;
     svg {
       path {
-        fill: #fff;
+        fill: $textLight;
       }
     }
   }
   &.female {
-    background-color: #faa7b5;
+    background-color: $iconFemale;
     svg {
       path {
-        fill: #fff;
+        fill: $textLight;
       }
     }
   }
   &.hermaphrodite {
-    background-color: #faf3c0;
+    background-color: $iconHermaphrodite;
     svg {
-      fill: #000;
+      fill: $textDarkest;
     }
   }
   &.species {
-    background-color: #d4fab4;
+    background-color: $iconSpecies;
     svg {
-      fill: #000;
+      fill: $textDarkest;
     }
   }
   &.planet {
-    background-color: #ad7b2a;
+    background-color: $iconPlanet;
     svg {
-      fill: #fff;
+      fill: $textLight;
     }
   }
   &.starship {
-    background-color: #fa5c59;
+    background-color: $iconStarship;
     svg {
-      fill: #fff;
+      fill: $textLight;
     }
   }
   &.vehicle {
-    background-color: #6e76fa;
+    background-color: $iconVehicle;
     svg {
-      fill: #fff;
+      fill: $textLight;
     }
   }
   &.spinner {

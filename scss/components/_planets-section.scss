@@ -15,7 +15,7 @@
     h4,
     h2,
     p {
-      color: #fff;
+      color: $textLight;
     }
   }
 
@@ -27,7 +27,7 @@
     display: block;
     top: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: $overlayDark;
     z-index: 1;
   }
 }

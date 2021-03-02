@@ -1,5 +1,7 @@
 button,
 .btn {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
   width: max-content;
   display: flex;
   align-items: center;
@@ -12,12 +14,13 @@ button,
     margin-right: 8px;
   }
   &.btn-back {
+    padding: 1rem 0;
     color: $textDark;
     background-color: transparent;
   }
 
   &.btn-dark {
-    background-color: #000;
+    background-color: $bgDarkest;
     span {
       color: $textLight;
     }
@@ -27,12 +30,12 @@ button,
   }
 
   &.btn-light {
-    color: #000;
-    background-color: #fff;
+    color: $textDarkest;
+    background-color: $bgLight;
   }
 
   &.btn-red {
-    color: #fff;
+    color: $textLight;
     background-color: #e11c1c;
   }
 

@@ -1,8 +1,10 @@
 $fontSize: 1.6rem;
 
+// Messages
 $warning: rgb(255, 104, 117);
 $info: rgb(152, 186, 255);
 
+//Text colors
 $textDark: rgb(27, 27, 27);
 $textDarkest: rgb(0, 0, 0);
 
@@ -10,12 +12,30 @@ $textLight: rgb(255, 255, 255);
 $textLight2: darken($textLight, 10%);
 $textLight3: darken($textLight, 20%);
 
-$linkColor: #028cdb;
-
+//Padding
 $paddingX: clamp(1.6rem, 3vw, 4rem);
 $paddingY: 8rem;
 
-$bgDarkest: #000;
+//Background colors
+$bgDarkest: rgb(0, 0, 0);
+
+$bgLight: rgb(255, 255, 255);
+$bgLight2: rgb(245, 245, 245);
+
+$overlayDark: rgba($bgDarkest, 0.7);
+
+$borderLight: rgb(255, 255, 255);
+$borderLight2: rgba(255, 255, 255, 0.2);
 
 $boxShadow: 0 5px 5px rgba(0, 0, 0, 0.1), 0 10px 15px rgba(0, 0, 0, 0.1),
   0 20px 25px rgba(0, 0, 0, 0.1);
+
+// Icons
+$iconDefault: rgb(255, 255, 37);
+$iconMale: rgb(110, 185, 250);
+$iconFemale: rgb(250, 167, 181);
+$iconHermaphrodite: rgb(250, 243, 192);
+$iconSpecies: rgb(212, 250, 180);
+$iconPlanet: rgb(173, 123, 42);
+$iconStarship: rgb(250, 92, 89);
+$iconVehicle: rgb(110, 118, 250);

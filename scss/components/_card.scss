@@ -9,7 +9,7 @@
     rgba(255, 255, 255, 0.6)
   );
   backdrop-filter: blur(6px);
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+  box-shadow: $boxShadow;
 
   &.large {
     padding: 0 4rem 4rem 4rem;
@@ -33,12 +33,12 @@
     box-shadow: $boxShadow;
   }
   h4.episode {
-    color: #000;
+    color: $textDarkest;
     font-weight: 500;
   }
   h3 {
     text-align: center;
-    color: #000;
+    color: $textDarkest;
   }
   span {
     text-align: center;
