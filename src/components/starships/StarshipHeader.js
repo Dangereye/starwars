@@ -1,9 +1,9 @@
 import React from "react";
 import { MdLocalMovies } from "react-icons/md";
-import { RiSpaceShipFill } from "react-icons/ri";
 import { IoPeopleSharp } from "react-icons/io5";
 import CommaSeparatedNumber from "../shared/CommaSeparatedNumber";
 import DetailsGroup from "../shared/DetailsGroup";
+import Icon from "../shared/Icon";
 const StarshipHeader = ({
   name,
   movies,
@@ -22,9 +22,7 @@ const StarshipHeader = ({
   return (
     <header>
       <div className="container">
-        <div className="icon icon-large starship">
-          <RiSpaceShipFill />
-        </div>
+        <Icon icon="starship" size="icon-large" />
         <div className="text">
           <h1>{name}</h1>
           <div className="stats">

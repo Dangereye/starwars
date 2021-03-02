@@ -1,10 +1,10 @@
 import React from "react";
 import { MdLocalMovies } from "react-icons/md";
-import { AiFillBug } from "react-icons/ai";
 import { IoPeopleSharp } from "react-icons/io5";
 import HomeWorld from "../shared/HomeWorld";
 import DetailsGroup from "../shared/DetailsGroup";
 import CommaSeparatedNumber from "../shared/CommaSeparatedNumber";
+import Icon from "../shared/Icon";
 const PlanetHeader = ({
   movies,
   people,
@@ -22,9 +22,7 @@ const PlanetHeader = ({
   return (
     <header>
       <div className="container">
-        <div className="icon icon-large species">
-          <AiFillBug />
-        </div>
+        <Icon icon="species" size="icon-large" />
         <div className="text">
           <h1>{name}</h1>
           <div className="stats">

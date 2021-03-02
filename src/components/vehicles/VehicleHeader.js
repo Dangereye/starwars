@@ -1,9 +1,9 @@
 import React from "react";
 import { MdLocalMovies } from "react-icons/md";
-import { GiTank } from "react-icons/gi";
 import { IoPeopleSharp } from "react-icons/io5";
 import CommaSeparatedNumber from "../shared/CommaSeparatedNumber";
 import DetailsGroup from "../shared/DetailsGroup";
+import Icon from "../shared/Icon";
 const VehicleHeader = ({
   name,
   movies,
@@ -21,9 +21,7 @@ const VehicleHeader = ({
   return (
     <header>
       <div className="container">
-        <div className="icon icon-large vehicle">
-          <GiTank />
-        </div>
+        <Icon icon="vehicle" size="icon-large" />
         <div className="text">
           <h1>{name}</h1>
           <div className="stats">

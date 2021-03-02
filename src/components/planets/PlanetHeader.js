@@ -1,9 +1,9 @@
 import React from "react";
 import { MdLocalMovies } from "react-icons/md";
-import { IoPlanetSharp } from "react-icons/io5";
 import { IoPeopleSharp } from "react-icons/io5";
 import DetailsGroup from "../shared/DetailsGroup";
 import CommaSeparatedNumber from "../shared/CommaSeparatedNumber";
+import Icon from "../shared/Icon";
 const PlanetHeader = ({
   climate,
   diameter,
@@ -20,9 +20,7 @@ const PlanetHeader = ({
   return (
     <header>
       <div className="container">
-        <div className="icon icon-large planet">
-          <IoPlanetSharp />
-        </div>
+        <Icon icon="planet" size="icon-large" />
         <div className="text">
           <h1>{name}</h1>
           <div className="stats">
