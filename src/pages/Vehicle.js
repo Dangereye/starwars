@@ -37,9 +37,19 @@ const Vehicle = () => {
           passengers={vehicle.passengers}
           classification={vehicle.vehicle_class}
         />
-        <GridList title="Movies" list={vehicle.films} path="/movie" />
+        <GridList
+          title="Movies"
+          type="movie"
+          list={vehicle.films}
+          path="/movie"
+        />
         {vehicle.pilots.length > 0 && (
-          <GridList title="Pilots" list={vehicle.pilots} path="/person" />
+          <GridList
+            title="Pilots"
+            type="person"
+            list={vehicle.pilots}
+            path="/person"
+          />
         )}
       </>
     );

@@ -25,12 +25,10 @@
     flex-direction: column;
     justify-content: center;
     background-color: rgb(245, 244, 244);
-    h4 {
+    h5,
+    p {
       color: $textDark;
       font-size: 1.6rem;
-    }
-    p {
-      font-size: 1.4rem;
     }
   }
 

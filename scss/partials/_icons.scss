@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(255, 255, 37, 0.9);
+  background-color: #ffff25;
   transition: 0.4s;
 
   &.icon-small {
@@ -34,6 +34,30 @@
     fill: #000;
   }
 
+  &.spinner {
+    background-color: #000;
+    svg {
+      path {
+        fill: #fff;
+      }
+    }
+  }
+  &.error {
+    background-color: $warning;
+    svg {
+      path {
+        fill: #fff;
+      }
+    }
+  }
+  &.movie {
+    background-color: #000;
+    svg {
+      path {
+        fill: #fff;
+      }
+    }
+  }
   &.male {
     background-color: #6eb9fa;
     svg {

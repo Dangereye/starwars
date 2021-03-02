@@ -38,9 +38,19 @@ const Planet = () => {
           passengers={starship.passengers}
           classification={starship.starship_class}
         />
-        <GridList title="Movies" list={starship.films} path="/movie" />
+        <GridList
+          title="Movies"
+          type="movie"
+          list={starship.films}
+          path="/movie"
+        />
         {starship.pilots.length > 0 && (
-          <GridList title="Pilots" list={starship.pilots} path="/person" />
+          <GridList
+            title="Pilots"
+            type="person"
+            list={starship.pilots}
+            path="/person"
+          />
         )}
       </>
     );

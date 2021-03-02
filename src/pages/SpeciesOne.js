@@ -37,8 +37,18 @@ const SpeciesOne = () => {
           avgHeight={species.average_height}
           avgLifespan={species.average_lifespan}
         />
-        <GridList title="Movies" list={species.films} path="/movie" />
-        <GridList title="Characters" list={species.people} path="/person" />
+        <GridList
+          title="Movies"
+          type="movie"
+          list={species.films}
+          path="/movie"
+        />
+        <GridList
+          title="Characters"
+          type="person"
+          list={species.people}
+          path="/person"
+        />
       </>
     );
   }

@@ -38,10 +38,16 @@ const Person = () => {
           starships={person.starships.length}
           vehicles={person.vehicles.length}
         />
-        <GridList title="Movie credits" list={person.films} path="/movie" />
+        <GridList
+          title="Movie credits"
+          type="movie"
+          list={person.films}
+          path="/movie"
+        />
         {person.starships.length > 0 && (
           <GridList
             title="Starships piloted"
+            type="starship"
             list={person.starships}
             path="/starship"
           />
@@ -49,6 +55,7 @@ const Person = () => {
         {person.vehicles.length > 0 && (
           <GridList
             title="Vehicles piloted"
+            type="vehicle"
             list={person.vehicles}
             path="/vehicle"
           />

@@ -37,10 +37,20 @@ const Planet = () => {
           terrain={planet.terrain}
         />
         {planet.films.length > 0 && (
-          <GridList title="Movies" list={planet.films} path="/movie" />
+          <GridList
+            title="Movies"
+            type="movie"
+            list={planet.films}
+            path="/movie"
+          />
         )}
         {planet.residents.length > 0 && (
-          <GridList title="Residents" list={planet.residents} path="/person" />
+          <GridList
+            title="Residents"
+            type="planet"
+            list={planet.residents}
+            path="/person"
+          />
         )}
       </>
     );

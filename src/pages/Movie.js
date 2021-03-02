@@ -36,11 +36,36 @@ const Movie = () => {
           director={movie.director}
           producer={movie.producer}
         />
-        <GridList title="Characters" list={movie.characters} path="/person" />
-        <GridList title="Planets" list={movie.planets} path="/planet" />
-        <GridList title="Species" list={movie.species} path="/species" />
-        <GridList title="Starships" list={movie.starships} path="/starship" />
-        <GridList title="Vehicles" list={movie.vehicles} path="/vehicle" />
+        <GridList
+          title="Characters"
+          type="person"
+          list={movie.characters}
+          path="/person"
+        />
+        <GridList
+          title="Planets"
+          type="planet"
+          list={movie.planets}
+          path="/planet"
+        />
+        <GridList
+          title="Species"
+          type="species"
+          list={movie.species}
+          path="/species"
+        />
+        <GridList
+          title="Starships"
+          type="starship"
+          list={movie.starships}
+          path="/starship"
+        />
+        <GridList
+          title="Vehicles"
+          type="vehicle"
+          list={movie.vehicles}
+          path="/vehicle"
+        />
       </>
     );
   }

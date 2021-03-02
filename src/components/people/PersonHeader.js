@@ -5,7 +5,7 @@ import { GiTank } from "react-icons/gi";
 import PersonSpecies from "../shared/PersonSpecies";
 import HomeWorld from "../shared/HomeWorld";
 import BgImage from "../../images/people.jpg";
-import GenderIcon from "../shared/GenderIcon";
+import Icon from "../shared/Icon";
 import CommaSeparatedNumber from "../shared/CommaSeparatedNumber";
 import DetailsGroup from "../shared/DetailsGroup";
 const PersonHeader = ({
@@ -26,7 +26,7 @@ const PersonHeader = ({
   return (
     <header style={{ background: `url(${BgImage})` }}>
       <div className="container">
-        <GenderIcon gender={gender} size="icon-large" />
+        <Icon icon={gender} size="icon-large" />
         <div className="text">
           <h1>{name}</h1>
           <div className="stats">
