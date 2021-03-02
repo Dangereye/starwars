@@ -4,7 +4,6 @@ import { RiSpaceShipFill } from "react-icons/ri";
 import { GiTank } from "react-icons/gi";
 import PersonSpecies from "../shared/PersonSpecies";
 import HomeWorld from "../shared/HomeWorld";
-import BgImage from "../../images/people.jpg";
 import Icon from "../shared/Icon";
 import CommaSeparatedNumber from "../shared/CommaSeparatedNumber";
 import DetailsGroup from "../shared/DetailsGroup";
@@ -24,7 +23,7 @@ const PersonHeader = ({
   vehicles,
 }) => {
   return (
-    <header style={{ background: `url(${BgImage})` }}>
+    <header>
       <div className="container">
         <Icon icon={gender} size="icon-large" />
         <div className="text">

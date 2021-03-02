@@ -1,8 +1,7 @@
 header {
   position: relative;
   padding: 4rem $paddingX;
-  background-position: center;
-  background-size: cover;
+  background-color: $bgDarkest;
 
   .container {
     position: relative;
@@ -93,15 +92,5 @@ header {
         padding: 4rem 0 0 0;
       }
     }
-  }
-  &::after {
-    content: "";
-    display: block;
-    background-color: rgba(#000, 1);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
   }
 }

@@ -8,9 +8,8 @@ const Footer = () => {
         <span className="">
           Powered by{" "}
           <a href="https://swapi.dev" target="_blank" rel="noreferrer">
-            swapi.dev
+            swapi
           </a>
-          .
         </span>
       </div>
     </footer>

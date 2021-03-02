@@ -18,14 +18,13 @@ import Vehicle from "./pages/Vehicle";
 
 const App = () => {
   const [MenuIsOpen, setMenuIsOpen] = useState(false);
-
   const toggle = () => {
     setMenuIsOpen(!MenuIsOpen);
   };
 
   return (
     <div id="app">
-      <Navbar menu={MenuIsOpen} toggle={toggle} />
+      <Navbar menu={MenuIsOpen} toggle={toggle} setMenu={setMenuIsOpen} />
       <MobileMenu menu={MenuIsOpen} toggle={toggle} />
       <main>
         <Switch>
