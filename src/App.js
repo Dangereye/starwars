@@ -15,6 +15,7 @@ import Starships from "./pages/Starships";
 import Starship from "./pages/Starship";
 import Vehicles from "./pages/Vehicles";
 import Vehicle from "./pages/Vehicle";
+import NotFound from "./pages/NotFound";
 
 const App = () => {
   const [MenuIsOpen, setMenuIsOpen] = useState(false);
@@ -40,6 +41,7 @@ const App = () => {
           <Route path="/starship/:id" exact component={Starship} />
           <Route path="/vehicles" exact component={Vehicles} />
           <Route path="/vehicle/:id" exact component={Vehicle} />
+          <Route path="*" exact component={NotFound} />
         </Switch>
       </main>
 
