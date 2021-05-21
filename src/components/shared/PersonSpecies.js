@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
 
-const PersonSpecies = ({ url = "http://swapi.dev/api/species/1", link }) => {
+const PersonSpecies = ({ url = "https://swapi.dev/api/species/1", link }) => {
   const { isLoading, error, data: species } = useFetch(url);
   let id;
   if (species) {

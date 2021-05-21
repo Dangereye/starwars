@@ -4,7 +4,7 @@ import Button from "../shared/Button";
 import Year from "../shared/Year";
 
 const MovieCard = ({ movie, id }) => {
-  const link = movie.url.split("http://swapi.dev/api/films/")[1];
+  const link = movie.url.split("https://swapi.dev/api/films/")[1];
   return (
     <div className="card large">
       <div className="image">
