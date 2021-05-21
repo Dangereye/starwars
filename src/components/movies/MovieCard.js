@@ -4,7 +4,7 @@ import Button from "../shared/Button";
 import Year from "../shared/Year";
 
 const MovieCard = ({ movie, id }) => {
-  const link = movie.url.split("https://swapi.dev/api/films/")[1];
+  const path_id = movie.url.replace(/\D+/g, "");
   return (
     <div className="card large">
       <div className="image">
@@ -20,7 +20,7 @@ const MovieCard = ({ movie, id }) => {
       <Year date={movie.release_date} />
       <Button
         iconEnd={<IoMdArrowRoundForward />}
-        path={`/movie/${link}`}
+        path={`/movie/${path_id}`}
         css="btn-dark btn-medium"
         text="Details"
       />
