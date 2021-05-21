@@ -8,7 +8,12 @@ const MovieCard = ({ movie, id }) => {
   return (
     <div className="card large">
       <div className="image">
-        <img width="300px" src={`/img/ep${[id]}.jpg`} alt={movie.title} />
+        <img
+          width="300px"
+          height="450px"
+          src={`/img/ep${[id]}.jpg`}
+          alt={movie.title}
+        />
       </div>
       <h4 className="episode">Episode {id}</h4>
       <h3>{movie.title}</h3>
