@@ -14,7 +14,6 @@ const Movie = () => {
     error,
     data: movie,
   } = useFetch(`https://swapi.dev/api/films/${id}`);
-  console.log(movie);
   useEffect(() => {
     window.scrollTo(0, 0);
   });
