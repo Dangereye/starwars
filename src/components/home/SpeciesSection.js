@@ -1,7 +1,4 @@
 import React from "react";
-import wookie from "../../images/wookie.jpg";
-import twilek from "../../images/twilek.jpg";
-import yodas from "../../images/yodas.jpg";
 import Button from "../shared/Button";
 
 const Species = () => {
@@ -10,19 +7,22 @@ const Species = () => {
       <div className="container">
         <div className="images">
           <img
-            src={wookie}
+            src="/img/wookie.jpg"
             alt="Wookie"
             title="Photo by Craig Adderley from Pexels."
+            loading="lazy"
           />
           <img
-            src={twilek}
+            src="/img/twilek.jpg"
             alt="Twilek"
             title="Image by tunechick83 from Pixabay."
+            loading="lazy"
           />
           <img
-            src={yodas}
+            src="/img/yodas.jpg"
             alt="Yodas"
             title="Photo by Aksel Fristrup on Unsplash."
+            loading="lazy"
           />
         </div>
         <div className="text">

@@ -1,5 +1,4 @@
 import React from "react";
-import { MovieCovers } from "../../data/MovieCovers";
 import { AiFillBug } from "react-icons/ai";
 import { GiTank } from "react-icons/gi";
 import { IoPeopleSharp, IoPlanetSharp } from "react-icons/io5";
@@ -21,7 +20,7 @@ const MovieHeader = ({
     <header>
       <div className="container">
         <div className="image">
-          <img src={MovieCovers[id - 1]} alt={title} />
+          <img src={`/img/ep${[id]}.jpg`} alt={title} />
         </div>
         <div className="text">
           <h4>Episode {id}</h4>

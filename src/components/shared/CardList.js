@@ -1,6 +1,5 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
-import background from "../../images/movies.bg.jpg";
 import PersonCard from "../people/PersonCard";
 import PlanetCard from "../planets/PlanetCard";
 import MovieCard from "../movies/MovieCard";
@@ -14,7 +13,7 @@ const CardList = ({ title, list, size }) => {
   return (
     <section
       className="card-list"
-      style={{ backgroundImage: `url(${background})` }}
+      style={{ backgroundImage: `url(/img/movies.bg.jpg)` }}
       title="Background image by ParallelVision from Pixabay"
     >
       <div className="container">
@@ -22,9 +21,17 @@ const CardList = ({ title, list, size }) => {
         <h2 className="section-title">{title}</h2>
         <div className={`items ${size}`}>
           {pathname === "/" &&
-            list.map((movie, index) => {
-              return <MovieCard movie={movie} key={index} id={index + 1} />;
-            })}
+            list
+              .sort((a, b) => a.episode_id - b.episode_id)
+              .map((movie) => {
+                return (
+                  <MovieCard
+                    movie={movie}
+                    key={`movie-${movie.episode_id}`}
+                    id={movie.episode_id}
+                  />
+                );
+              })}
           {pathname === "/people" &&
             list.map((person, index) => {
               return <PersonCard person={person} key={index} />;

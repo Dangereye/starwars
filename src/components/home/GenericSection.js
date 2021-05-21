@@ -15,7 +15,7 @@ const HomeSection = ({
     <section className="homepage-section">
       <div className="container">
         <div className="image">
-          <img src={src} alt={alt} title={thanks} />
+          <img src={src} alt={alt} title={thanks} loading="lazy" />
         </div>
         <div className="text">
           <h4>Explore</h4>

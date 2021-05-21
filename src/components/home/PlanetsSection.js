@@ -1,12 +1,11 @@
 import React from "react";
-import background from "../../images/planets.jpg";
 import Button from "../shared/Button";
 
 const Planets = () => {
   return (
     <section
       id="planets"
-      style={{ backgroundImage: `url(${background})` }}
+      style={{ backgroundImage: `url(/img/planets.jpg)` }}
       title="Image by Octavian A Tudose from Pixabay."
     >
       <div className="content">

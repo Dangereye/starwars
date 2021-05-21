@@ -9,10 +9,12 @@ import PreviousPage from "../components/shared/PreviousPage";
 
 const Movie = () => {
   const { id } = useParams();
-  const { isLoading, error, data: movie } = useFetch(
-    `https://swapi.dev/api/films/${id}`
-  );
-
+  const {
+    isLoading,
+    error,
+    data: movie,
+  } = useFetch(`https://swapi.dev/api/films/${id}`);
+  console.log(movie);
   useEffect(() => {
     window.scrollTo(0, 0);
   });
@@ -29,7 +31,7 @@ const Movie = () => {
       <>
         <PreviousPage />
         <MovieHeader
-          id={id}
+          id={movie.episode_id}
           title={movie.title}
           year={movie.release_date}
           characters={movie.characters.length}

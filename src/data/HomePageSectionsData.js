@@ -1,10 +1,7 @@
-import characters from "../images/people.jpg";
-import vehicles from "../images/vehicles.jpg";
-import starships from "../images/starships.jpg";
 export const HomePageSectionsData = {
   characters: {
     image: {
-      src: characters,
+      src: "/img/people.jpg",
       alt: "Characters",
       thanks: "Photo by Markus Spiske on Unsplash.",
     },
@@ -22,7 +19,7 @@ export const HomePageSectionsData = {
   },
   vehicles: {
     image: {
-      src: vehicles,
+      src: "/img/vehicles.jpg",
       alt: "Vehicles",
 
       thanks: "Photo by Hello I'm Nik on Unsplash.",
@@ -41,7 +38,7 @@ export const HomePageSectionsData = {
   },
   starships: {
     image: {
-      src: starships,
+      src: "/img/starships.jpg",
       alt: "Starships",
 
       thanks: "Photo by Brian McGowan on Unsplash.",
