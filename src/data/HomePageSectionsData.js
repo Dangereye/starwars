@@ -11,7 +11,7 @@ export const HomePageSectionsData = {
     text: {
       title: "Characters",
       paragraph:
-        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed corporis in accusamus reprehenderit, possimus provident unde! Harum, explicabo?",
+        "Explore characters from the Starwars universe, navigate through each of them to view personal statistics from species, appearance, homeworld, age and more.",
       color: "",
     },
     button: {
@@ -30,7 +30,7 @@ export const HomePageSectionsData = {
     text: {
       title: "Vehicles",
       paragraph:
-        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed corporis in accusamus reprehenderit, possimus provident unde! Harum, explicabo?",
+        "Explore iconic vehicles from the Starwars universe and detailed statistics from class, model, manufacturers, speed, capacity, price and more.",
       color: "",
     },
     button: {
@@ -49,7 +49,7 @@ export const HomePageSectionsData = {
     text: {
       title: "Starships",
       paragraph:
-        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed corporis in accusamus reprehenderit, possimus provident unde! Harum, explicabo?",
+        "Explore iconic starships from the Starwars universe and detailed statistics from class, model, manufacturers, speed, capacity, price and more.",
       color: "",
     },
     button: {

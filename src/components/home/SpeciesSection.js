@@ -29,9 +29,8 @@ const Species = () => {
           <h4>Explore</h4>
           <h2>Species</h2>
           <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed
-            corporis in accusamus reprehenderit, possimus provident unde! Harum,
-            explicabo?
+            Explore unique species from the Starwars universe, view statistics
+            on class, designation, appearance, lifespan, homeworld and more.
           </p>
           <Button
             path="/species"

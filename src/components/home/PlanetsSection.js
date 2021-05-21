@@ -13,8 +13,9 @@ const Planets = () => {
         <h4>Explore</h4>
         <h2>Planets</h2>
         <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed corporis
-          in accusamus reprehenderit, possimus provident unde! Harum, explicabo?
+          Take a deep dive into the beautifully imagined worlds from the
+          Starwars universe, view statistics concerning population, orbital time
+          cycles, scale, gravity, climate, terrain, surface water and more.
         </p>
         <Button path="/planets" css="btn-red btn-large" text="View planets" />
       </div>
