@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer>
       <div className="container">
-        <span className="copyright">&copy; Dangereye 2021.</span>
+        <span className="copyright">&copy; Craig Puxty 2021.</span>
         <span className="">
           Powered by{" "}
           <a href="https://swapi.dev" target="_blank" rel="noreferrer">
