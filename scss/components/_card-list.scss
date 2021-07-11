@@ -7,11 +7,13 @@
 
   .container {
     z-index: 3;
-    h4,
+
+    span.section-subtitle,
     h2 {
       color: $textLight;
       text-align: center;
     }
+
     h2 {
       margin-bottom: 10rem;
     }

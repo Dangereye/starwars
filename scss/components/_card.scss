@@ -31,14 +31,17 @@
     top: -4rem;
     box-shadow: $boxShadow;
   }
-  h4.episode {
+
+  span.episode {
     color: $textDarkest;
     font-weight: 500;
   }
+
   h3 {
     text-align: center;
     color: $textDarkest;
   }
+
   span {
     text-align: center;
     text-transform: capitalize;

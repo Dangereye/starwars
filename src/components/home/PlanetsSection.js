@@ -9,7 +9,7 @@ const Planets = () => {
       title="Image by Octavian A Tudose from Pixabay."
     >
       <div className="content">
-        <h4>Explore</h4>
+        <span className="section-subtitle">Explore</span>
         <h2>Planets</h2>
         <p>
           Take a deep dive into the beautifully imagined worlds from the

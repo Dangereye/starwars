@@ -26,7 +26,7 @@ const Species = () => {
           />
         </div>
         <div className="text">
-          <h4>Explore</h4>
+          <span className="section-subtitle">Explore</span>
           <h2>Species</h2>
           <p>
             Explore unique species from the Starwars universe, view statistics

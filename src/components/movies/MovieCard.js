@@ -15,7 +15,7 @@ const MovieCard = ({ movie, id }) => {
           alt={movie.title}
         />
       </div>
-      <h4 className="episode">Episode {id}</h4>
+      <span className="episode">Episode {id}</span>
       <h3>{movie.title}</h3>
       <Year date={movie.release_date} />
       <Button

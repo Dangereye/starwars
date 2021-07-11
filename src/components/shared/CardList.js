@@ -17,7 +17,7 @@ const CardList = ({ title, list, size }) => {
       title="Background image by ParallelVision from Pixabay"
     >
       <div className="container">
-        <h4>Explore</h4>
+        <span className="section-subtitle">Explore</span>
         <h2 className="section-title">{title}</h2>
         <div className={`items ${size}`}>
           {pathname === "/" &&

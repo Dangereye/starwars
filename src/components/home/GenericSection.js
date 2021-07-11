@@ -18,7 +18,7 @@ const HomeSection = ({
           <img src={src} alt={alt} title={thanks} loading="lazy" />
         </div>
         <div className="text">
-          <h4>Explore</h4>
+          <span className="section-subtitle">Explore</span>
           <h2 className="section-title">{title}</h2>
           <p>{paragraph}</p>
           <Button path={path} css={css} text={text} />
