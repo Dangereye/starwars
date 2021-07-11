@@ -643,7 +643,7 @@ section.homepage-section .container .text {
           justify-content: center;
 }
 
-@media (max-width: 666px) {
+@media (max-width: 677px) {
   section.homepage-section {
     padding: 4rem clamp(1.6rem, 3vw, 4rem);
   }
