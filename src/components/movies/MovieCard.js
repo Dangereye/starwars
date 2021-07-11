@@ -9,8 +9,8 @@ const MovieCard = ({ movie, id }) => {
     <div className="card large">
       <div className="image">
         <picture>
-          <source srcset={`/img/ep${[id]}@400.jpg`} media="(max-width:528px)" />
           <source srcset={`/img/ep${[id]}@270.jpg`} media="(min-width:529px)" />
+          <source srcset={`/img/ep${[id]}@400.jpg`} media="(max-width:528px)" />
         </picture>
         <img
           width="400px"
