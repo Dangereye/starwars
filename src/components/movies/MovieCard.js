@@ -8,10 +8,14 @@ const MovieCard = ({ movie, id }) => {
   return (
     <div className="card large">
       <div className="image">
+        <picture>
+          <source srcset={`/img/ep${[id]}@400.jpg`} media="(max-width:528px)" />
+          <source srcset={`/img/ep${[id]}@270.jpg`} media="(min-width:529px)" />
+        </picture>
         <img
-          width="300px"
-          height="450px"
-          src={`/img/ep${[id]}.jpg`}
+          width="400px"
+          height="600px"
+          src={`/img/ep${[id]}@400.jpg`}
           alt={movie.title}
         />
       </div>

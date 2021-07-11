@@ -14,6 +14,10 @@ h3,
   line-height: 1.4;
 }
 
+h3 {
+  font-size: 1.6rem;
+}
+
 span.section-subtitle {
   display: block;
   font-size: 1.6rem;
@@ -25,10 +29,6 @@ span.section-subtitle {
 h2.section-title {
   font-size: 2.4rem;
   line-height: 1.618;
-}
-
-h3 {
-  font-size: 2rem;
 }
 
 span + h3,
@@ -907,15 +907,6 @@ section.homepage-section .container .text {
   margin-top: 4rem;
   display: -ms-grid;
   display: grid;
-}
-
-.card-list .container .items.large {
-  -ms-grid-columns: (minmax(31rem, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(31rem, 1fr));
-  gap: 8rem;
-}
-
-.card-list .container .items.small {
   -ms-grid-columns: (minmax(22rem, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
   -webkit-column-gap: 4rem;
