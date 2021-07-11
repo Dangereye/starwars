@@ -6,9 +6,15 @@ const Navbar = ({ menu, toggle, setMenu }) => {
   return (
     <nav id="navbar">
       <div className="container">
-        <Link className="logo" to="/" onClick={() => setMenu(false)}>
+        <Link
+          className="logo"
+          to="/"
+          aria-label="Star Wars"
+          onClick={() => setMenu(false)}
+        >
           <Logo />
         </Link>
+
         <ul className="desktop-menu">
           <li>
             <Link to="/people">People</Link>
