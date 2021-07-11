@@ -22,7 +22,7 @@ const PlanetHeader = ({
       <div className="container">
         <Icon icon="planet" size="icon-large" />
         <div className="text">
-          <h1>{name}</h1>
+          <h2 className="header-title">{name}</h2>
           <div className="stats">
             <div>
               <MdLocalMovies />
@@ -33,9 +33,9 @@ const PlanetHeader = ({
               <span>{people}</span>
             </div>
           </div>
-          <h4>Population</h4>
+          <div className="header-subtitle">Population</div>
           <CommaSeparatedNumber number={population} />
-          <h4>Time</h4>
+          <div className="header-subtitle">Time</div>
           <div className="details">
             <DetailsGroup
               name="Day"
@@ -50,7 +50,7 @@ const PlanetHeader = ({
               }
             />
           </div>
-          <h4>Attributes</h4>
+          <div className="header-subtitle">Attributes</div>
           <div className="details">
             <DetailsGroup
               name="Diameter"

@@ -20,11 +20,30 @@ const MovieHeader = ({
     <header>
       <div className="container">
         <div className="image">
-          <img src={`/img/ep${[id]}.jpg`} alt={title} />
+          <picture>
+            <source
+              srcSet={`/img/ep${[id]}@600.jpg`}
+              media="(min-width:1080px)"
+            />
+            <source
+              srcSet={`/img/ep${[id]}@400.jpg`}
+              media="(min-width:730px) and (max-width:1079px)"
+            />
+            <source
+              srcSet={`/img/ep${[id]}@270.jpg`}
+              media="(min-width:569px) and (max-width:729px)"
+            />
+            <img
+              width="600px"
+              height="900px"
+              src={`/img/ep${[id]}@600.jpg`}
+              alt={title}
+            />
+          </picture>
         </div>
         <div className="text">
-          <h4>Episode {id}</h4>
-          <h1>{title}</h1>
+          <div className="header-subtitle">Episode {id}</div>
+          <h2 className="header-title">{title}</h2>
           <div className="stats">
             <div>
               <IoPeopleSharp />
@@ -47,11 +66,11 @@ const MovieHeader = ({
               <span>{vehicles}</span>
             </div>
           </div>
-          <h4>Opening crawl</h4>
+          <div className="header-subtitle">Opening crawl</div>
           <p>{crawl}</p>
-          <h4>Director</h4>
+          <div className="header-subtitle">Director</div>
           <p>{director}</p>
-          <h4>Producer(s)</h4>
+          <div className="header-subtitle">Producer(s)</div>
           <p>{producer}</p>
         </div>
       </div>

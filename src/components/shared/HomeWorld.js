@@ -8,7 +8,7 @@ const PersonHomeWorld = ({ url }) => {
 
   return (
     <>
-      <h4>Homeworld</h4>
+      <div className="header-subtitle">Homeworld</div>
       {isLoading && <span className="key">Loading..</span>}
       {error && <span className="value">n/a</span>}
       {homeworld && (

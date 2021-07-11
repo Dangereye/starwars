@@ -23,7 +23,7 @@ const VehicleHeader = ({
       <div className="container">
         <Icon icon="vehicle" size="icon-large" />
         <div className="text">
-          <h1>{name}</h1>
+          <h2 className="header-title">{name}</h2>
           <div className="stats">
             <div>
               <MdLocalMovies />
@@ -34,20 +34,20 @@ const VehicleHeader = ({
               <span>{people}</span>
             </div>
           </div>
-          <h4>Type</h4>
+          <div className="header-subtitle">Type</div>
           <div className="details">
             <DetailsGroup name="Class" value={classification} />
             <DetailsGroup name="Model" value={model} />
             <DetailsGroup name="Manufacturer" value={manufacturer} />
           </div>
-          <h4>Engine</h4>
+          <div className="header-subtitle">Engine</div>
           <div className="details">
             <DetailsGroup
               name="Max speed"
               value={<CommaSeparatedNumber number={speed} />}
             />
           </div>
-          <h4>Capacity</h4>
+          <div className="header-subtitle">Capacity</div>
           <div className="details">
             <DetailsGroup name="Crew" value={crew} />
             <DetailsGroup
@@ -60,7 +60,7 @@ const VehicleHeader = ({
             />
             <DetailsGroup name="Consumables supply" value={consumables} />
           </div>
-          <h4>Cost</h4>
+          <div className="header-subtitle">Cost</div>
           <CommaSeparatedNumber number={cost} credits={true} />
         </div>
       </div>

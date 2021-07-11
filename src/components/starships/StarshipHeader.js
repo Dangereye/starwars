@@ -24,7 +24,7 @@ const StarshipHeader = ({
       <div className="container">
         <Icon icon="starship" size="icon-large" />
         <div className="text">
-          <h1>{name}</h1>
+          <h2 className="header-title">{name}</h2>
           <div className="stats">
             <div>
               <MdLocalMovies />
@@ -35,14 +35,14 @@ const StarshipHeader = ({
               <span>{people}</span>
             </div>
           </div>
-          <h4>Type</h4>
+          <div className="header-subtitle">Type</div>
           <div className="details">
             <DetailsGroup name="Class" value={classification} />
             <DetailsGroup name="Model" value={model} />
             <DetailsGroup name="manufacturer" value={manufacturer} />
           </div>
 
-          <h4>Drive</h4>
+          <div className="header-subtitle">Drive</div>
           <div className="details">
             <DetailsGroup name="Hyperdrive rating" value={hyperdrive} />
             <DetailsGroup
@@ -51,7 +51,7 @@ const StarshipHeader = ({
             />
           </div>
 
-          <h4>Hull</h4>
+          <div className="header-subtitle">Hull</div>
           <div className="details">
             <DetailsGroup name="Crew" value={crew} />
             <DetailsGroup
@@ -64,7 +64,7 @@ const StarshipHeader = ({
             />
             <DetailsGroup name="Consumable supply" value={consumables} />
           </div>
-          <h4>Cost</h4>
+          <div className="header-subtitle">Cost</div>
           <CommaSeparatedNumber number={cost} credits={true} />
         </div>
       </div>

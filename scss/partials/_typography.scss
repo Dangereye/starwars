@@ -39,17 +39,21 @@ h3 + a.value {
   margin-top: 1rem;
 }
 
-a + h4,
-span + h4,
-.details + h4 {
+a + .header-subtitle,
+span + .header-subtitle,
+.details + .header-subtitle {
   margin-top: 2rem;
 }
 
-h4 + a,
-h4 + span,
-h4 + p,
-h4 + h1 {
+.header-subtitle + a,
+.header-subtitle + span,
+.header-subtitle + p,
+.header-subtitle + h2 {
   margin-top: 1rem;
+}
+
+.header-title {
+  font-size: 3.2rem;
 }
 
 h5 {
@@ -61,7 +65,7 @@ p {
 }
 
 h2 + p,
-p + h4 {
+p + .header-subtitle {
   margin-top: 2rem;
 }
 

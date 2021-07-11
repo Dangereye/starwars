@@ -27,7 +27,7 @@ const PersonHeader = ({
       <div className="container">
         <Icon icon={gender} size="icon-large" />
         <div className="text">
-          <h1>{name}</h1>
+          <h2 className="header-title">{name}</h2>
           <div className="stats">
             <div>
               <MdLocalMovies />
@@ -42,9 +42,9 @@ const PersonHeader = ({
               <span className="value">{vehicles}</span>
             </div>
           </div>
-          <h4>Species</h4>
+          <div className="header-subtitle">Species</div>
           <PersonSpecies url={species[0]} link={true} />
-          <h4>Appearance</h4>
+          <div className="header-subtitle">Appearance</div>
           <div className="details">
             <DetailsGroup
               name="Height"
@@ -59,7 +59,7 @@ const PersonHeader = ({
             <DetailsGroup name="Skin colour(s)" value={skinColor} />
           </div>
           <HomeWorld url={homeWorld} />
-          <h4>Birth year</h4>
+          <div className="header-subtitle">Birth year</div>
           <span className="value">
             {birthYear}{" "}
             {birthYear !== "unknown" && "(Years before the battle of Yavin)"}

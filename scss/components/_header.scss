@@ -12,7 +12,6 @@ header {
       flex: 1 1 30%;
       img {
         width: 100%;
-        min-height: 34rem;
       }
     }
 
@@ -22,13 +21,16 @@ header {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      h4 {
+
+      .header-subtitle {
         font-size: 1.4rem;
         color: $textLight3;
       }
-      h1 {
+
+      h2.header-title {
         color: $textLight;
       }
+
       p {
         color: $textLight2;
       }
